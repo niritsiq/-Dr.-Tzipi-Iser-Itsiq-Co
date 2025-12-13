@@ -13,467 +13,14 @@
   <script type="text/javascript" async src="https://cdn.mida.so/js/optimize.js?key=1rZ95mgaRyK0qdeyvJKlzx"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Tzipi Iser Itsiq & Co. | Law Firm</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Assistant:wght@300;400;600;700&display=swap"
     rel="stylesheet">
-  <style>
-    :root {
-      --navy: #0f1e3a;
-      --sage: #5c8a7a;
-      --light: #f6f8fb;
-      --text: #1f2a3d;
-      --maxw: 1100px;
-    }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Assistant', 'Lato', sans-serif;
-      background: #fff;
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: #fff;
-      border-bottom: 1px solid #e3e8ef;
-    }
-
-    .nav {
-      width: 100%;
-      max-width: none;
-      margin: 0;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 28px;
-      padding: 24px 40px;
-    }
-
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      color: var(--navy);
-      font-size: 22px;
-      justify-self: end;
-    }
-
-    .logo img {
-      height: 70px;
-      width: auto;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      justify-content: center;
-    }
-
-    nav a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 20px;
-      letter-spacing: 0.2px;
-      padding: 6px 2px;
-      white-space: nowrap;
-    }
-
-    nav a:hover {
-      color: var(--sage);
-    }
-
-    /* Dropdown Menu Styles */
-    .nav-item {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background: white;
-      min-width: 200px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      border-radius: 8px;
-      padding: 8px 0;
-      z-index: 1000;
-      margin-top: 8px;
-    }
-
-    [dir="ltr"] .dropdown-menu {
-      right: auto;
-      left: 0;
-    }
-
-    .nav-item:hover .dropdown-menu {
-      display: block;
-    }
-
-    .dropdown-menu a {
-      display: block;
-      padding: 10px 20px;
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s, color 0.2s;
-      white-space: nowrap;
-    }
-
-    .dropdown-menu a:hover {
-      background: var(--light);
-      color: var(--sage);
-    }
-
-    .dropdown-arrow {
-      display: inline-block;
-      margin-right: 4px;
-      transition: transform 0.2s;
-    }
-
-    [dir="ltr"] .dropdown-arrow {
-      margin-right: 0;
-      margin-left: 4px;
-    }
-
-    .nav-item:hover .dropdown-arrow {
-      transform: rotate(180deg);
-    }
-
-    .lang-toggle {
-      display: flex;
-      gap: 10px;
-      justify-self: start;
-    }
-
-    .lang-btn {
-      border: 1px solid var(--navy);
-      background: #fff;
-      color: var(--navy);
-      padding: 10px 16px;
-      cursor: pointer;
-      border-radius: 24px;
-      font-weight: 800;
-      font-size: 17px;
-      min-width: 60px;
-    }
-
-    .lang-btn.active {
-      background: var(--navy);
-      color: #fff;
-    }
-
-    .hero {
-      background: var(--light);
-    }
-
-    .hero-inner {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 60px 20px;
-      display: grid;
-      gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: 32px;
-      color: var(--navy);
-      margin-bottom: 12px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 18px;
-    }
-
-    .cta {
-      display: inline-block;
-      background: var(--navy);
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    section {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-
-    section h2 {
-      font-size: 26px;
-      color: var(--navy);
-      margin-bottom: 16px;
-    }
-
-    .grid {
-      display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .card {
-      border: 1px solid #e3e8ef;
-      padding: 18px;
-      border-radius: 8px;
-      background: #fff;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: var(--navy);
-    }
-
-    .highlights {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .pill {
-      background: var(--light);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    .contact {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-
-    .form-group {
-      margin-bottom: 12px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    input,
-    textarea {
-      padding: 10px;
-      border: 1px solid #cfd5df;
-      border-radius: 4px;
-      font-family: inherit;
-    }
-
-    textarea {
-      min-height: 120px;
-    }
-
-    .small {
-      font-size: 13px;
-      color: #4a5568;
-    }
-
-    .map-block {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .map-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 14px;
-      color: var(--navy);
-      text-decoration: none;
-      margin-top: 4px;
-    }
-
-    .map-link:hover {
-      text-decoration: underline;
-    }
-
-    .map-photo-link {
-      display: inline-block;
-      margin-top: 4px;
-    }
-
-    .map-photo {
-      width: 100%;
-      max-width: 360px;
-      height: auto;
-      border-radius: 12px;
-      border: 1px solid #e3e8ef;
-      background: #dfe6ef;
-      object-fit: cover;
-    }
-
-    .team-grid {
-      display: grid;
-      gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
-
-    .team-card {
-      border: 1px solid #e3e8ef;
-      border-radius: 12px;
-      padding: 24px;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .team-photo-wrapper {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .team-photo {
-      width: 180px;
-      height: 220px;
-      border-radius: 8px;
-      object-fit: cover;
-      background: #dfe6ef;
-      border: 1px solid #e3e8ef;
-    }
-
-    .team-info {
-      text-align: right;
-    }
-
-    [dir="ltr"] .team-info {
-      text-align: left;
-    }
-
-    .team-name {
-      font-size: 24px;
-      color: var(--navy);
-      margin-bottom: 4px;
-      font-weight: 700;
-    }
-
-    .team-title {
-      font-size: 16px;
-      color: var(--sage);
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    .team-contact {
-      background: var(--light);
-      padding: 14px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 14px;
-    }
-
-    .team-contact p {
-      margin-bottom: 8px;
-    }
-
-    .team-contact p:last-child {
-      margin-bottom: 0;
-    }
-
-    .linkedin-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--navy);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s;
-    }
-
-    .linkedin-link:hover {
-      color: #0077b5;
-      text-decoration: underline;
-    }
-
-    .team-section {
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #e3e8ef;
-    }
-
-    .team-section:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-
-    .team-section h4 {
-      font-size: 16px;
-      color: var(--navy);
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    .team-section p {
-      font-size: 14px;
-      line-height: 1.7;
-      margin-bottom: 10px;
-    }
-
-    .team-section p:last-child {
-      margin-bottom: 0;
-    }
-
-    .team-section ul {
-      list-style: none;
-      padding-right: 0;
-    }
-
-    [dir="ltr"] .team-section ul {
-      padding-left: 0;
-    }
-
-    .team-section ul li {
-      font-size: 14px;
-      line-height: 1.7;
-      margin-bottom: 8px;
-      padding-right: 18px;
-      position: relative;
-    }
-
-    [dir="ltr"] .team-section ul li {
-      padding-left: 18px;
-      padding-right: 0;
-    }
-
-    .team-section ul li:before {
-      content: '•';
-      position: absolute;
-      right: 0;
-      color: var(--sage);
-      font-weight: bold;
-    }
-
-    [dir="ltr"] .team-section ul li:before {
-      left: 0;
-      right: auto;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      color: #4a5568;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -484,10 +31,11 @@
         <span data-i18n="logo">עו״ד ד״ר ציפי איסר איציק | Law & Regulation</span>
       </div>
       <nav>
-        <a href="#about" data-i18n="navAbout">אודות</a>
-        <a href="#expertise" data-i18n="navExpertise">תחומי התמחות</a>
+        <a href="index.html" data-i18n="navHome">דף הבית</a>
+        <a href="about.html" data-i18n="navAbout">אודות</a>
+        <a href="expertise.html" data-i18n="navExpertise">תחומי התמחות</a>
         <div class="nav-item">
-          <a href="#team" data-i18n="navTeam">
+          <a href="index.html#team" data-i18n="navTeam">
             <span class="dropdown-arrow">▼</span>
             הצוות
           </a>
@@ -497,8 +45,8 @@
             <a href="sagi.html" data-i18n="navSagi">שגיא אגמון</a>
           </div>
         </div>
-        <a href="#career" data-i18n="navCareer">קריירה</a>
-        <a href="#contact" data-i18n="navContact">צור קשר</a>
+        <a href="career.html" data-i18n="navCareer">קריירה</a>
+        <a href="contact.html" data-i18n="navContact">צור קשר</a>
       </nav>
       <div class="lang-toggle">
         <button class="lang-btn active" id="btn-he">עב</button>
@@ -510,573 +58,97 @@
   <div class="hero">
     <div class="hero-inner">
       <div>
-        <p data-i18n="heroSub">ייעוץ אסטרטגי. מומחיות רגולטורית. ליטיגציה.</ <h1 data-i18n="heroTitle">מובילה את תחום
-          הסביבה והאקלים בישראל</h1>p>
-          <a class="cta" href="#contact" data-i18n="cta">צור קשר</a>
+        <h1 data-i18n="heroTitle">ד"ר ציפי איסר-איציק, עורכי דין</h1>
+        <p data-i18n="heroSub"></p>
+        <a class="cta" href="contact.html" data-i18n="cta">צור קשר</a>
       </div>
       <div style="justify-self:center;">
-        <img src="tzipi-photo-t1.jpeg" alt="Dr. Tzipi Iser Itsiq portrait"
-          style="width:260px;height:320px;object-fit:cover;border-radius:12px;background:#dfe6ef;">
+        <img src="tzipi-photo-t1.jpeg" alt="Dr. Tzipi Iser Itsiq" class="hero-img">
       </div>
     </div>
   </div>
 
   <section id="about">
     <h2 data-i18n="aboutTitle">אודות</h2>
-    <p data-i18n="aboutBody">
-      משרד ד"ר ציפי איסר איציק ושות' – משרד עורכי דין, הוקם על-ידי ד"ר ציפי איסר איציק, מהדמויות המובילות בישראל בתחום
-      דיני הסביבה, האקלים ו-ESG, בעלת ניסיון מקצועי של למעלה מ-30 שנה בעריכת דין.
-      המשרד הוקם לאחר פרישתה מפירמת Lipa & Co., שם כיהנה כשותפה בכירה וראש תחום סביבה ואקלים. קודם לכן כיהנה ד"ר איסר
-      איציק כמנכ"לית אדם טבע ודין - האגודה הישראלית להגנת הסביבה, וצברה ניסיון ייחודי בהובלת מהלכים רגולטוריים, ניהול
-      הליכים משפטיים מורכבים ועיצוב מדיניות סביבתית ואקלימית ברמה הלאומית והמקומית.
-      המשרד נשען על צוות משפטי מנוסה ויציב, אשר פעל לאורך שנים בשיתוף פעולה מקצועי עם ד"ר איסר איציק, בין היתר במסגרת
-      פעילות משפטית וציבורית בתחום ההגנה על הסביבה, ובעל ניסיון משמעותי בעבודה מול רגולטורים, משרדי ממשלה, רשויות
-      מקומיות, גופים עסקיים וציבוריים, וכן בבתי המשפט ובערכאות מנהליות.
-      המשרד מלווה תאגידים פרטיים וציבוריים, רשויות מקומיות וגופים מוסדיים בליווי משפטי ואסטרטגי מקיף, תוך שילוב מומחיות
-      משפטית מעמיקה עם הבנה רגולטורית, כלכלית וניהולית רחבה. פעילות המשרד מונחית על-ידי מחויבות מלאה ללקוח ולצרכיו,
-      חתירה לפתרונות משפטיים מדויקים, יישומיים וחדשניים, והתאמת האסטרטגיה המשפטית למאפייניו הייחודיים של כל מקרה.
-      תחומי ההתמחות של המשרד כוללים דיני סביבה ואקלים, רגולציה ואכיפה סביבתית ESG וקיימות תאגידית, ליטיגציה מנהלית
-      וציבורית, ייעוץ לפרויקטים ותשתיות, וליווי גופים עסקיים וציבוריים בהתמודדות עם אתגרים רגולטוריים, סביבתיים
-      ואקלימיים מורכבים.
-
-    </p>
-    <div class="highlights">
-      <div class="pill" data-i18n="award">🏆 זוכת פרסים: Environmental Lawyer of the Year (Europe)</div>
-      <div class="pill" data-i18n="phd">🎓 דוקטורט: מומחית לרגולציה סביבתית</div>
-      <div class="pill" data-i18n="lead">🏛️ הנהגה: מנכ״לית לשעבר, אדם טבע ודין</div>
+    <p data-i18n="aboutBody"></p>
+    <div class="badge-grid">
+      <div class="badge">
+        <h3 data-i18n="award"></h3>
+      </div>
+      <div class="badge">
+        <h3 data-i18n="phd"></h3>
+      </div>
+      <div class="badge">
+        <h3 data-i18n="lead"></h3>
+      </div>
     </div>
   </section>
 
   <section id="expertise">
     <h2 data-i18n="expertiseTitle">תחומי התמחות</h2>
-    <div class="grid">
-      <div class="card">
-        <h3 data-i18n="exp1Title">רגולציה סביבתית</h3>
-        <p data-i18n="exp1Body">ציות לתעשייה; רעלים, אוויר, פסולת; היתרים והתגוננות מול אכיפה.</p>
+    <div class="expertise-grid">
+      <div class="exp-card">
+        <h3 data-i18n="exp1Title"></h3>
+        <p data-i18n="exp1Body"></p>
       </div>
-      <div class="card">
-        <h3 data-i18n="exp2Title">אקלים ו-ESG</h3>
-        <p data-i18n="exp2Body">אסטרטגיית פחמן, דיווחי ESG, מסגרות בינ״ל (COP), סיכוני אקלים.</p>
+      <div class="exp-card">
+        <h3 data-i18n="exp2Title"></h3>
+        <p data-i18n="exp2Body"></p>
       </div>
-      <div class="card">
-        <h3 data-i18n="exp3Title">ליטיגציה מנהלית</h3>
-        <p data-i18n="exp3Body">עתירות, תובענות ייצוגיות, בג״ץ; אתגרי רגולציה.</p>
+      <div class="exp-card">
+        <h3 data-i18n="exp3Title"></h3>
+        <p data-i18n="exp3Body"></p>
       </div>
-      <div class="card">
-        <h3 data-i18n="exp4Title">קלינטק ואנרגיה</h3>
-        <p data-i18n="exp4Body">פרויקטי אנרגיה מתחדשת, כלכלה מעגלית, סטארטאפים ירוקים.</p>
+      <div class="exp-card">
+        <h3 data-i18n="exp4Title"></h3>
+        <p data-i18n="exp4Body"></p>
       </div>
-      <div class="card">
-        <h3 data-i18n="exp5Title">ניהול משברים</h3>
-        <p data-i18n="exp5Body">תגובה משפטית מידית לאירועי סביבה ולליכי אכיפה.</p>
+      <div class="exp-card">
+        <h3 data-i18n="exp5Title"></h3>
+        <p data-i18n="exp5Body"></p>
       </div>
     </div>
   </section>
 
   <section id="team">
     <h2 data-i18n="teamTitle">הצוות</h2>
-    <p data-i18n="teamBody">
-      צוות משימתי בהובלת עו״ד ד״ר ציפי איסר איציק. עורכי דין ומתמחים מנוסים בדין מנהלי ומדעי הסביבה, המעניקים ליווי
-      אישי, מדויק ומהיר.
-    </p>
-
-    <!-- Team Members Grid -->
-    <div class="team-grid" style="margin-top:40px;">
-
-      <!-- Dr. Tzipi Iser Itsiq Profile -->
-      <div class="team-card" id="tzipi">
+    <p data-i18n="teamBody"></p>
+    <div class="team-grid" style="margin-top:20px;">
+      <a href="tzipi.html" class="team-card" style="text-decoration:none; display:block;">
         <div class="team-photo-wrapper">
-          <img src="tzipi-photo-t1.jpeg" alt="Dr. Tzipi Iser Itsiq" class="team-photo">
+          <img src="tzipi-photo-t1.jpeg" class="team-photo" alt="Tzipi">
         </div>
         <div class="team-info">
-          <h3 class="team-name" data-i18n="tzipiName">ד"ר ציפי איסר איציק</h3>
-          <p class="team-title" data-i18n="tzipiTitle">עורכת דין, שותפה מייסדת</p>
-
-          <div class="team-contact">
-            <p data-i18n="tzipiPhone"> טלפון: 03-6070603</p>
-            <p>
-              <span data-i18n="tzipiEmailLabel"> דוא״ל: </span>
-              <a href="mailto:tzipi@tzippilaw.co.il" class="linkedin-link">tzipi@tzippilaw.co.il</a>
-            </p>
-            <p>
-              <a href="https://www.linkedin.com/in/dr-tzipi-iser-itsiq-23b5631b/" target="_blank" rel="noopener"
-                class="linkedin-link">
-                <span></span>
-                <span data-i18n="tzipiLinkedIn">LinkedIn</span>
-              </a>
-            </p>
-            <p data-i18n="tzipiOffice"> משרד: מגדל אייקון, דרך מנחם בגין 13, רמת גן</p>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="tzipiPracticeTitle">תחומי עיסוק</h4>
-            <ul data-i18n="tzipiPracticeList">
-              <li>סביבה ואקלים</li>
-              <li>רגולציה ומשפט מנהלי</li>
-              <li>תובענות ייצוגיות ותביעות נגזרות</li>
-            </ul>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="tzipiExpTitle">ניסיון מקצועי</h4>
-            <p data-i18n="tzipiExpBody">
-              ציפי הינה שותפה מייסדת ומנהלת מחלקת סביבה ואקלים. ציפי הינה בעלת ניסיון רב בקידומן של רפורמות רגולטוריות
-              חדשניות בתחומי הגנת הסביבה ובליווי מאבקים משפטיים-סביבתיים, מתוקף תפקידה בעבר כמנכ"לית וכיועצת משפטית של
-              אדם טבע ודין. ציפי מונתה כחברת המשלחת הישראלית לוועידות השנתיות של אמנת האקלים באו"ם ורכשה ניסיון משפטי
-              עשיר בתחומי פעילותה.
-            </p>
-            <p data-i18n="tzipiExpBody2">
-              ציפי הינה חברת צוות המומחים ב"נבו בוררויות וגישורים", מתמחה ביישוב סכסוכים בתחומי הגנת הסביבה והאקלים, תוך
-              שילוב עומק משפטי, ניסיון וראייה אסטרטגית. בנוסף, משמשת ציפי מרצה בנושאי רגולציה סביבתית בגופים אקדמיים
-              ובכנסים מקצועיים בארץ ובעולם, ומכהנת כראש המרכז להגנת הסביבה במכללה האקדמית נתניה.
-            </p>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="tzipiAwardsTitle">פרסים והוקרה</h4>
-            <p data-i18n="tzipiAwardsBody">
-              בגין פעילותה נבחרה ציפי כאחת הנשים המשפיעות בישראל מטעם העיתונים גלובס ודה-מרקר וזכתה באותות הוקרה. זוכת
-              פרס Environmental Lawyer of the Year לשנים 2023 ו-2024, מטעם Women in Business Law (EMEA) של המדרג
-              הבינלאומי IFLR. ציפי היא עורכת הדין הישראלית היחידה שזכתה בפרס יוקרתי זה בקטגוריה האישית שנתיים ברציפות.
-              מדורגת על ידי Chambers & Partners. מחלקת סביבה ואקלים שבראשותה מדורגת על ידי מדריך Green Guide של המדרג
-              Legal 500.
-            </p>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="tzipiEduTitle">השכלה</h4>
-            <ul data-i18n="tzipiEduList">
-              <li>תואר שלישי (דוקטורט) במשפטים – אוניברסיטת בר אילן (2015)</li>
-              <li>תואר שני במשפטים – אוניברסיטת תל אביב (1997)</li>
-              <li>תואר ראשון במשפטים – אוניברסיטת תל אביב (1993)</li>
-            </ul>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="tzipiBarTitle">הסמכה</h4>
-            <p data-i18n="tzipiBar">לשכת עורכי הדין בישראל, 1994</p>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="tzipiLangTitle">שפות</h4>
-            <p data-i18n="tzipiLang">עברית, אנגלית</p>
-          </div>
+          <h3 class="team-name" data-i18n="tzipiName"></h3>
+          <p class="team-title" data-i18n="tzipiTitle"></p>
         </div>
-      </div>
-
-      <!-- Tal Granot Profile -->
-      <div class="team-card" id="tal">
+      </a>
+      <a href="tal.html" class="team-card" style="text-decoration:none; display:block;">
         <div class="team-photo-wrapper">
-          <img src="tal-granot-photo.jpg" alt="Tal Granot" class="team-photo">
+          <img src="tal-granot-photo.jpg" class="team-photo" alt="Tal">
         </div>
         <div class="team-info">
-          <h3 class="team-name" data-i18n="talName">טל גרנות</h3>
-          <p class="team-title" data-i18n="talTitle">עורכת דין</p>
-
-          <div class="team-contact">
-            <p data-i18n="talPhone"> טלפון: 03-000000</p>
-            <p>
-              <span data-i18n="talEmailLabel"> דוא״ל: </span>
-              <a href="mailto:tal.g@tii.co.il" class="linkedin-link">tal.g@tii.co.il</a>
-            </p>
-            <p>
-              <a href="https://www.linkedin.com/in/dr-tzipi-iser-itsiq-23b5631b/" target="_blank" rel="noopener"
-                class="linkedin-link">
-                <span></span>
-                <span data-i18n="talLinkedIn">LinkedIn</span>
-              </a>
-            </p>
-            <p data-i18n="talOffice"> משרד: מגדל אייקון, דרך מנחם בגין 13, רמת גן</p>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="talPracticeTitle">תחומי עיסוק</h4>
-            <ul data-i18n="talPracticeList">
-              <li>משפט מנהלי</li>
-              <li> נקייהאיכות הסביבה, קלינטק ואנרגיה</li>
-            </ul>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="talExpTitle">ניסיון מקצועי</h4>
-            <p data-i18n="talExpBody">
-              טל הינה עורכת דין במשרד ציפי איסר איציק. תחומי התמחותה העיקריים הינם איכות הסביבה, קלינטק ואנרגיה, לצד
-              עיסוק במשפט מנהלי. טל בעלת ניסיון נרחב בתחום הגנת הסביבה ובריאות הציבור. טרם הצטרפותה למשרד, כיהנה כעורכת
-              דין וראש תחום בריאות וסביבה בעמותת "אדם טבע ודין". במסגרת זו עסקה בליטיגציה ובחקיקה, ייעוץ משפטי, ניסוח
-              וקידום הצעות חוק וקידום מדיניות סביבתית.
-            </p>
-            <p data-i18n="talExpBody2">
-              בנוסף, טל מרצה בנושאי רגולציה סביבתית בגופים אקדמיים. בעברה, עבדה באגף לקידום זכויות בעמותת אלו״ט - אגודה
-              לאומית לילדים אוטיסטים. את התמחותה המשפטית עשתה טל בפרקליטות מחוז מרכז (פלילי).
-            </p>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="talEduTitle">השכלה</h4>
-            <ul data-i18n="talEduList">
-              <li>תואר שני כפול במשפט ציבורי ובינלאומי (LL.M) בהצטיינות – אוניברסיטת תל אביב ואוניברסיטת נורת'ווסטרן,
-                שיקגו (2012)</li>
-              <li>תואר ראשון במשפטים (LL.B) – אוניברסיטת תל אביב (2008)</li>
-            </ul>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="talBarTitle">הסמכה</h4>
-            <p data-i18n="talBar">לשכת עורכי הדין, 2009</p>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="talLangTitle">שפות</h4>
-            <p data-i18n="talLang">עברית, אנגלית</p>
-          </div>
+          <h3 class="team-name" data-i18n="talName"></h3>
+          <p class="team-title" data-i18n="talTitle"></p>
         </div>
-      </div>
-
-      <!-- Sagi Agmon Profile -->
-      <div class="team-card" id="sagi">
+      </a>
+      <a href="sagi.html" class="team-card" style="text-decoration:none; display:block;">
         <div class="team-photo-wrapper">
-          <img src="sagi-agmon-photo.jpg" alt="Sagi Agmon" class="team-photo">
+          <img src="sagi-agmon-photo.jpg" class="team-photo" alt="Sagi">
         </div>
         <div class="team-info">
-          <h3 class="team-name" data-i18n="sagiName">שגיא אגמון</h3>
-          <p class="team-title" data-i18n="sagiTitle">עורך דין</p>
-
-          <div class="team-contact">
-            <p data-i18n="sagiPhone"> טלפון: 03-6070604</p>
-            <p>
-              <span data-i18n="sagiEmailLabel"> דוא״ל: </span>
-              <a href="mailto:sagi.a@tzippilaw.co.il" class="linkedin-link">sagi.a@tzippilaw.co.il</a>
-            </p>
-            <p>
-              <a href="https://www.linkedin.com/in/dr-tzipi-iser-itsiq-23b5631b/" target="_blank" rel="noopener"
-                class="linkedin-link">
-                <span></span>
-                <span data-i18n="sagiLinkedIn">LinkedIn</span>
-              </a>
-            </p>
-            <p data-i18n="sagiOffice"> משרד: מגדל אייקון, דרך מנחם בגין 13, רמת גן</p>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="sagiPracticeTitle">תחומי עיסוק</h4>
-            <ul data-i18n="sagiPracticeList">
-              <li>סביבה ואקלים</li>
-              <li>רגולציה ומשפט מנהלי</li>
-              <li>תובענות ייצוגיות ותביעות נגזרות</li>
-            </ul>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="sagiExpTitle">ניסיון מקצועי</h4>
-            <p data-i18n="sagiExpBody">
-              שגיא הינו עורך דין במשרד ציפי איסר איציק, בעל ניסיון רב בתחומי איכות הסביבה, בדגש על תובענות ייצוגיות
-              סביבתיות, וכן ניסיון של למעלה מ-20 שנה במשפט מנהלי. שגיא התמחה בעמותת "אדם טבע ודין", ובהמשך עבד כעו"ד
-              עצמאי המתמחה בתחומי העמותות והמשפט המנהלי, וכן כשכיר בעמותות שונות כגון "תנו לחיות לחיות" ועמותת "חדו"ש –
-              לחופש דת ושוויון". במסגרת זו הוביל וניהל עשרות הליכים מנהליים, רבים מהם מול רשויות מקומיות בתחומי איכות
-              הסביבה, וכן היה מעורב בתובענות ייצוגיות בתחומים צרכניים.
-            </p>
-            <p data-i18n="sagiExpBody2">
-              במשרדנו מטפל שגיא בתובענות ייצוגיות מורכבות בתחום הסביבתי, הן בייצוג תובעים והן בייצוג נתבעים. לצד זאת,
-              הוא מעניק שירותים משפטיים בתחום הסביבתי לרשויות מקומיות שונות, לארגונים וחברות מהמובילים במשק הישראלי.
-              בנוסף, שגיא מעניק שירותים משפטיים לעמותות סביבתיות מובילות כגון מגמה ירוקה והאגודה הישראלית לאקולוגיה.
-            </p>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="sagiEduTitle">השכלה</h4>
-            <ul data-i18n="sagiEduList">
-              <li>תואר שני ביחסים בינלאומיים (M.A) – אוניברסיטת תל אביב (2009)</li>
-              <li>תואר ראשון במשפטים (LL.B) – אוניברסיטת חיפה (1999)</li>
-            </ul>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="sagiBarTitle">הסמכה</h4>
-            <p data-i18n="sagiBar">לשכת עורכי הדין בישראל, 2001</p>
-          </div>
-
-          <div class="team-section">
-            <h4 data-i18n="sagiLangTitle">שפות</h4>
-            <p data-i18n="sagiLang">עברית, אנגלית</p>
-          </div>
+          <h3 class="team-name" data-i18n="sagiName"></h3>
+          <p class="team-title" data-i18n="sagiTitle"></p>
         </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="career">
-    <h2 data-i18n="careerTitle">קריירה</h2>
-    <p data-i18n="careerBody1">אקדמיה: מרצה במכללה האקדמית נתניה; פרסומים בדיני סביבה ורגולציה מנהלית.</p>
-    <p data-i18n="careerBody2">הזדמנויות: תמיד מחפשים משפטנים מצוינים עם תשוקה לסביבה. שלחו קורות חיים ל-[email].</p>
-  </section>
-
-  <section id="contact">
-    <h2 data-i18n="contactTitle">צור קשר</h2>
-    <div class="contact">
-      <div>
-        <p data-i18n="addr">כתובת: מנחם בגין 13, מגדל Icon, קומה 4, רמת גן, ישראל</p>
-        <p data-i18n="phone">טלפון: +972-52-3520267</p>
-        <p data-i18n="email">אימייל: Office@tii.com</p>
-        <div class="map-block">
-          <p class="small" data-i18n="mapNoteLabel">מפה:</p>
-          <a class="map-link" href="https://maps.app.goo.gl/TiieotbNFX7EmGVJ8" target="_blank" rel="noopener"
-            aria-label="Open map in Google Maps">
-            <span aria-hidden="true">🗺️</span>
-            <span data-i18n="mapNoteLink">Icon Tower - ניווט</span>
-          </a>
-          <a class="map-photo-link" href="https://maps.app.goo.gl/TiieotbNFX7EmGVJ8" target="_blank" rel="noopener"
-            aria-label="Open map in Google Maps">
-            <img class="map-photo" src="location.png" alt="Icon Tower location">
-          </a>
-        </div>
-      </div>
-      <form>
-        <div class="form-group">
-          <label data-i18n="fName">שם</label>
-          <input type="text" />
-        </div>
-        <div class="form-group">
-          <label data-i18n="fCompany">חברה</label>
-          <input type="text" />
-        </div>
-        <div class="form-group">
-          <label data-i18n="fEmail">אימייל</label>
-          <input type="email" />
-        </div>
-        <div class="form-group">
-          <label data-i18n="fPhone">טלפון</label>
-          <input type="tel" />
-        </div>
-        <div class="form-group">
-          <label data-i18n="fMsg">הודעה</label>
-          <textarea></textarea>
-        </div>
-        <div class="form-group">
-          <label class="small"><input type="checkbox" /> <span data-i18n="consent">אני מאשר/ת יצירת קשר.</span></label>
-        </div>
-        <button type="submit" class="cta" data-i18n="send">שליחה</button>
-      </form>
+      </a>
     </div>
   </section>
 
   <footer>
-    <div data-i18n="footer">© עו״ד ד״ר ציפי איסר איציק | Law & Regulation</div>
+    <p data-i18n="footer"></p>
   </footer>
 
-  <script>
-    const i18n = {
-      he: {
-        dir: 'rtl', lang: 'he',
-        logo: 'ד"ר ציפי איסר איציק ושות\' | משרד עורכי דין',
-        navAbout: 'אודות', navExpertise: 'תחומי התמחות', navTeam: 'הצוות', navCareer: 'קריירה', navContact: 'צור קשר',
-        navTzipi: 'ד"ר ציפי איסר איציק', navTal: 'טל גרנות', navSagi: 'שגיא אגמון',
-        heroTitle: 'ד"ר ציפי איסר איציק ושות\'',
-        heroSub: 'משרד עורכי דין בוטיק מוביל לדיני סביבה, אקלים ו-ESG. ניסיון של מעל 30 שנה בליווי תאגידים, רשויות וגופים ציבוריים בסוגיות רגולטריות מורכבות. ייעוץ משפטי מקיף, חשיבה אסטרטגית ופתרונות יישומיים בעולם משתנה.',
-        cta: 'צור קשר',
-        aboutTitle: 'אודות',
-        aboutBody: 'משרד ד"ר ציפי איסר איציק ושות\' – משרד עורכי דין, הוקם על-ידי ד"ר ציפי איסר איציק, מהדמויות המובילות בישראל בתחום דיני הסביבה, האקלים ו-ESG, בעלת ניסיון מקצועי של למעלה מ-30 שנה בעריכת דין.\n' +
-          'המשרד הוקם לאחר פרישתה מפירמת Lipa & Co., שם כיהנה כשותפה בכירה וראש תחום סביבה ואקלים. קודם לכן כיהנה ד"ר איסר איציק כמנכ"לית אדם טבע ודין - האגודה הישראלית להגנת הסביבה, וצברה ניסיון ייחודי בהובלת מהלכים רגולטוריים, ניהול הליכים משפטיים מורכבים ועיצוב מדיניות סביבתית ואקלימית ברמה הלאומית והמקומית.\n' +
-          'המשרד נשען על צוות משפטי מנוסה ויציב, אשר פעל לאורך שנים בשיתוף פעולה מקצועי עם ד"ר איסר איציק, בין היתר במסגרת פעילות משפטית וציבורית בתחום ההגנה על הסביבה, ובעל ניסיון משמעותי בעבודה מול רגולטורים, משרדי ממשלה, רשויות מקומיות, גופים עסקיים וציבוריים, וכן בבתי המשפט ובערכאות מנהליות.\n' +
-          'המשרד מלווה תאגידים פרטיים וציבוריים, רשויות מקומיות וגופים מוסדיים בליווי משפטי ואסטרטגי מקיף, תוך שילוב מומחיות משפטית מעמיקה עם הבנה רגולטורית, כלכלית וניהולית רחבה. פעילות המשרד מונחית על-ידי מחויבות מלאה ללקוח ולצרכיו, חתירה לפתרונות משפטיים מדויקים, יישומיים וחדשניים, והתאמת האסטרטגיה המשפטית למאפייניו הייחודיים של כל מקרה.\n' +
-          'תחומי ההתמחות של המשרד כוללים דיני סביבה ואקלים, רגולציה ואכיפה סביבתית ESG וקיימות תאגידית, ליטיגציה מנהלית וציבורית, ייעוץ לפרויקטים ותשתיות, וליווי גופים עסקיים וציבוריים בהתמודדות עם אתגרים רגולטוריים, סביבתיים ואקלימיים מורכבים.',
-        award: '🏆 זוכת פרסים: Environmental Lawyer of the Year (Europe)',
-        phd: '🎓 דוקטורט: מומחית לרגולציה סביבתית',
-        lead: '🏛️ הנהגה: מנכ״לית לשעבר, אדם טבע ודין',
-        expertiseTitle: 'תחומי התמחות',
-        exp1Title: 'רגולציה סביבתית', exp1Body: 'ציות לתעשייה; רעלים, אוויר, פסולת; היתרים והתגוננות מול אכיפה.',
-        exp2Title: 'אקלים ו-ESG', exp2Body: 'אסטרטגיית פחמן, דיווחי ESG, מסגרות בינ״ל (COP), סיכוני אקלים.',
-        exp3Title: 'ליטיגציה מנהלית', exp3Body: 'עתירות, תובענות ייצוגיות, בג״ץ; אתגרי רגולציה.',
-        exp4Title: 'קלינטק ואנרגיה', exp4Body: 'פרויקטי אנרגיה מתחדשת, כלכלה מעגלית, סטארטאפים ירוקים.',
-        exp5Title: 'ניהול משברים', exp5Body: 'תגובה משפטית מידית לאירועי סביבה ולליכי אכיפה.',
-        teamTitle: 'הצוות',
-        teamBody: 'צוות משימתי בהובלת עו״ד ד״ר ציפי איסר איציק. עורכי דין ומתמחים מנוסים בדין מנהלי ומדעי הסביבה, המעניקים ליווי אישי, מדויק ומהיר.',
-        tzipiName: 'ד"ר ציפי איסר איציק',
-        tzipiTitle: 'עורכת דין, שותפה מייסדת',
-        tzipiPhone: ' טלפון: 03-6070603',
-        tzipiEmailLabel: ' דוא״ל: ',
-        tzipiLinkedIn: 'לינקדין: ד"ר ציפי איסר איציק ושות\'',
-        tzipiOffice: ' משרד: מגדל אייקון, דרך מנחם בגין 13, רמת גן',
-        tzipiPracticeTitle: 'תחומי עיסוק',
-        tzipiPracticeList: '<li>סביבה ואקלים</li><li>רגולציה ומשפט מנהלי</li><li>תובענות ייצוגיות ותביעות נגזרות</li>',
-        tzipiExpTitle: 'ניסיון מקצועי',
-        tzipiExpBody: 'ציפי הינה שותפה מייסדת ומנהלת מחלקת סביבה ואקלים. ציפי הינה בעלת ניסיון רב בקידומן של רפורמות רגולטוריות חדשניות בתחומי הגנת הסביבה ובליווי מאבקים משפטיים-סביבתיים, מתוקף תפקידה בעבר כמנכ"לית וכיועצת משפטית של אדם טבע ודין. ציפי מונתה כחברת המשלחת הישראלית לוועידות השנתיות של אמנת האקלים באו"ם ורכשה ניסיון משפטי עשיר בתחומי פעילותה.',
-        tzipiExpBody2: 'ציפי הינה חברת צוות המומחים ב"נבו בוררויות וגישורים", מתמחה ביישוב סכסוכים בתחומי הגנת הסביבה והאקלים, תוך שילוב עומק משפטי, ניסיון וראייה אסטרטגית. בנוסף, משמשת ציפי מרצה בנושאי רגולציה סביבתית בגופים אקדמיים ובכנסים מקצועיים בארץ ובעולם, ומכהנת כראש המרכז להגנת הסביבה במכללה האקדמית נתניה.',
-        tzipiAwardsTitle: 'פרסים והוקרה',
-        tzipiAwardsBody: 'בגין פעילותה נבחרה ציפי כאחת הנשים המשפיעות בישראל מטעם העיתונים גלובס ודה-מרקר וזכתה באותות הוקרה. זוכת פרס Environmental Lawyer of the Year לשנים 2023 ו-2024, מטעם Women in Business Law (EMEA) של המדרג הבינלאומי IFLR. ציפי היא עורכת הדין הישראלית היחידה שזכתה בפרס יוקרתי זה בקטגוריה האישית שנתיים ברציפות. מדורגת על ידי Chambers & Partners. מחלקת סביבה ואקלים שבראשותה מדורגת על ידי מדריך Green Guide של המדרג Legal 500.',
-        tzipiEduTitle: 'השכלה',
-        tzipiEduList: '<li>תואר שלישי (דוקטורט) במשפטים – אוניברסיטת בר אילן (2015)</li><li>תואר שני במשפטים – אוניברסיטת תל אביב (1997)</li><li>תואר ראשון במשפטים – אוניברסיטת תל אביב (1993)</li>',
-        tzipiBarTitle: 'הסמכה',
-        tzipiBar: 'לשכת עורכי הדין בישראל, 1994',
-        tzipiLangTitle: 'שפות',
-        tzipiLang: 'עברית, אנגלית',
-        talName: 'טל גרנות',
-        talTitle: 'עורכת דין',
-        talPhone: ' טלפון: 03-00000',
-        talEmailLabel: ' דוא״ל: ',
-        talLinkedIn: 'לינקדין: ד"ר ציפי איסר איציק ושות\'',
-        talOffice: ' משרד: מגדל אייקון, דרך מנחם בגין 13, רמת גן',
-        talPracticeTitle: 'תחומי עיסוק',
-        talPracticeList: '<li>משפט מנהלי</li><li>איכות הסביבה, קלינטק ואנרגיה</li>',
-        talExpTitle: 'ניסיון מקצועי',
-        talExpBody: 'טל הינה עורכת דין במשרד ציפי איסר איציק. תחומי התמחותה העיקריים הינם איכות הסביבה, קלינטק ואנרגיה, לצד עיסוק במשפט מנהלי. טל בעלת ניסיון נרחב בתחום הגנת הסביבה ובריאות הציבור. טרם הצטרפותה למשרד, כיהנה כעורכת דין וראש תחום בריאות וסביבה בעמותת "אדם טבע ודין". במסגרת זו עסקה בליטיגציה ובחקיקה, ייעוץ משפטי, ניסוח וקידום הצעות חוק וקידום מדיניות סביבתית.',
-        talExpBody2: 'בנוסף, טל מרצה בנושאי רגולציה סביבתית בגופים אקדמיים. בעברה, עבדה באגף לקידום זכויות בעמותת אלו״ט - אגודה לאומית לילדים אוטיסטים. את התמחותה המשפטית עשתה טל בפרקליטות מחוז מרכז (פלילי).',
-        talEduTitle: 'השכלה',
-        talEduList: '<li>תואר שני כפול במשפט ציבורי ובינלאומי (LL.M) בהצטיינות – אוניברסיטת תל אביב ואוניברסיטת נורת\'ווסטרן, שיקגו (2012)</li><li>תואר ראשון במשפטים (LL.B) – אוניברסיטת תל אביב (2008)</li>',
-        talBarTitle: 'הסמכה',
-        talBar: 'לשכת עורכי הדין, 2009',
-        talLangTitle: 'שפות',
-        talLang: 'עברית, אנגלית',
-        sagiName: 'שגיא אגמון',
-        sagiTitle: 'עורך דין',
-        sagiPhone: ' טלפון: 03-6070604',
-        sagiEmailLabel: ' דוא״ל: ',
-        sagiLinkedIn: 'לינקדין: ד"ר ציפי איסר איציק ושות\'',
-        sagiOffice: ' משרד: מגדל אייקון, דרך מנחם בגין 13, רמת גן',
-        sagiPracticeTitle: 'תחומי עיסוק',
-        sagiPracticeList: '<li>סביבה ואקלים</li><li>רגולציה ומשפט מנהלי</li><li>תובענות ייצוגיות ותביעות נגזרות</li>',
-        sagiExpTitle: 'ניסיון מקצועי',
-        sagiExpBody: 'שגיא הינו עורך דין במשרד ציפי איסר איציק, בעל ניסיון רב בתחומי איכות הסביבה, בדגש על תובענות ייצוגיות סביבתיות, וכן ניסיון של למעלה מ-20 שנה במשפט מנהלי. שגיא התמחה בעמותת "אדם טבע ודין", ובהמשך עבד כעו"ד עצמאי המתמחה בתחומי העמותות והמשפט המנהלי, וכן כשכיר בעמותות שונות כגון "תנו לחיות לחיות" ועמותת "חדו"ש – לחופש דת ושוויון". במסגרת זו הוביל וניהל עשרות הליכים מנהליים, רבים מהם מול רשויות מקומיות בתחומי איכות הסביבה, וכן היה מעורב בתובענות ייצוגיות בתחומים צרכניים.',
-        sagiExpBody2: 'במשרדנו מטפל שגיא בתובענות ייצוגיות מורכבות בתחום הסביבתי, הן בייצוג תובעים והן בייצוג נתבעים. לצד זאת, הוא מעניק שירותים משפטיים בתחום הסביבתי לרשויות מקומיות שונות, לארגונים וחברות מהמובילים במשק הישראלי. בנוסף, שגיא מעניק שירותים משפטיים לעמותות סביבתיות מובילות כגון מגמה ירוקה והאגודה הישראלית לאקולוגיה.',
-        sagiEduTitle: 'השכלה',
-        sagiEduList: '<li>תואר שני ביחסים בינלאומיים (M.A) – אוניברסיטת תל אביב (2009)</li><li>תואר ראשון במשפטים (LL.B) – אוניברסיטת חיפה (1999)</li>',
-        sagiBarTitle: 'הסמכה',
-        sagiBar: 'לשכת עורכי הדין בישראל, 2001',
-        sagiLangTitle: 'שפות',
-        sagiLang: 'עברית, אנגלית',
-        careerTitle: 'קריירה',
-        careerBody1: 'אקדמיה: מרצה במכללה האקדמית נתניה; פרסומים בדיני סביבה ורגולציה מנהלית.',
-        careerBody2: 'הזדמנויות: תמיד מחפשים משפטנים מצוינים עם תשוקה לסביבה. שלחו קורות חיים ל-[email].',
-        contactTitle: 'ד"ר ציפי איסר איציק ושות\' - משרד עורכי דין',
-        addr: 'כתובת: מנחם בגין 13, מגדל Icon, קומה 4, רמת גן, ישראל',
-        phone: 'טלפון: +972-52-3520267',
-        email: 'אימייל: Office@tii.com',
-        mapNoteLabel: 'מפה:',
-        mapNoteLink: 'Icon Tower - ניווט',
-        fName: 'שם', fCompany: 'חברה', fEmail: 'אימייל', fPhone: 'טלפון', fMsg: 'הודעה',
-        consent: 'אני מאשר/ת יצירת קשר.',
-        send: 'שליחה',
-        footer: '© ד"ר ציפי איסר איציק ושות\' | משרד עורכי דין'
-      },
-      en: {
-        dir: 'ltr', lang: 'en',
-        logo: 'Dr. Tzipi Iser Itsiq & Co. | Law Firm',
-        navAbout: 'About', navExpertise: 'Expertise', navTeam: 'The Team', navCareer: 'Career', navContact: 'Contact',
-        navTzipi: 'Dr. Tzipi Iser Itsiq', navTal: 'Tal Granot', navSagi: 'Sagi Agmon',
-        heroTitle: 'Dr. Tzipi Iser Itsiq & Co.',
-        heroSub: 'A leading boutique law firm specializing in Environmental, Climate Law and ESG. With over 30 years of experience advising corporations, public authorities and institutional clients on complex regulatory matters. Senior legal counsel, Strategic thinking and practical solutions for a rapidly evolving world.',
-        cta: 'Contact Us',
-        aboutTitle: 'About',
-        aboutBody: 'Dr. Tzipi Iser Itsiq & Co. is a boutique law firm specializing in Environmental Law, Climate Regulation, and ESG. The firm was founded by Dr. Tzipi Iser Itsiq, one of Israel’s leading legal experts in the fields of environment and climate, with over 30 years of professional legal experience.\n\nThe firm was established following Dr. Iser Itsiq’s departure from Lipa & Co., where she served as a senior partner and Head of the Environmental and Climate Practice. Prior to that, she served as CEO of Adam Teva V’Din – the Israel Union for Environmental Defense, gaining unique experience in regulatory leadership, complex environmental litigation, and the shaping of environmental and climate policy at both the national and local levels.\n\nThe firm is supported by a highly experienced and stable legal team that has worked closely with Dr. Iser Itsiq for many years, including in the context of legal and public-interest environmental work. The team brings substantial experience in engaging with regulators, government authorities, municipalities, public bodies, and courts, in matters involving complex regulatory, environmental, and climate-related challenges.\n\nThe firm provides strategic legal advisory services to private and public corporations, multinational companies, institutional clients, and local authorities. Its work combines deep legal expertise with a broad understanding of regulatory systems, governance, risk management, and international sustainability standards.\n\nThe firm’s practice is guided by an unwavering commitment to its clients, a results-oriented and pragmatic approach, and the tailoring of legal strategy to the specific regulatory, commercial, and reputational considerations of each matter. Core values include professional excellence, strategic thinking, meticulous attention to detail, integrity, and the highest standards of legal ethics.\n\nThe firm’s areas of expertise include environmental and climate law, environmental regulation and enforcement, ESG and corporate sustainability, administrative and public law litigation, infrastructure and energy projects, and legal advisory on cross-border regulatory and climate-related risks.',
-        award: '🏆 Award: Environmental Lawyer of the Year (Europe)',
-        phd: '🎓 PhD: Environmental Regulation Expert',
-        lead: '🏛️ Leadership: Former CEO, Israel Union for Environmental Defense',
-        expertiseTitle: 'Expertise',
-        exp1Title: 'Environmental Regulation', exp1Body: 'Compliance for industry; toxins, air, waste; permitting and enforcement defense.',
-        exp2Title: 'Climate & ESG', exp2Body: 'Carbon strategy, ESG reporting, international frameworks (COP), climate risk.',
-        exp3Title: 'Administrative Litigation', exp3Body: 'Petitions, class actions, Supreme Court hearings; regulatory challenges.',
-        exp4Title: 'Cleantech & Energy', exp4Body: 'Renewables, circular economy, green tech/startups; permitting and structures.',
-        exp5Title: 'Crisis Management', exp5Body: 'Immediate legal response to environmental incidents and enforcement actions.',
-        teamTitle: 'The Team',
-        teamBody: 'A dedicated task force led by Dr. Iser Itsiq. Senior attorneys and interns in administrative law and environmental sciences deliver personalized, precise, and rapid counsel.',
-        tzipiName: 'Dr. Tzipi Iser Itsiq',
-        tzipiTitle: 'Founding Partner, Head of Environment & Climate Department',
-        tzipiPhone: ' Phone: +972-3-6070603',
-        tzipiEmailLabel: ' Email: ',
-        tzipiLinkedIn: 'LinkedIn: Dr. Tzipi Iser Itsiq & Co.',
-        tzipiOffice: ' Office: Icon Tower, 13 Menachem Begin Rd, Ramat Gan',
-        tzipiPracticeTitle: 'Practice Areas',
-        tzipiPracticeList: '<li>Environment & Climate Change</li><li>Regulation & Administrative Law</li><li>Class Actions & Derivative Suits</li>',
-        tzipiExpTitle: 'Professional Experience',
-        tzipiExpBody: 'Dr. Tzipi Iser Itsiq is the Founding Partner and Head of the Environment and Climate Department. She possesses extensive experience in promoting innovative regulatory reforms in environmental protection and leading legal-environmental campaigns, stemming from her tenure as CEO and Legal Counsel of "Adam Teva V\'Din" (Israel Union for Environmental Defense). Tzipi was appointed as a member of the Israeli delegation to the annual UN Climate Change Conferences, acquiring rich legal experience in her fields of activity.',
-        tzipiExpBody2: 'Tzipi serves on the panel of experts at "Nevo Arbitration and Mediation," specializing in dispute resolution in environmental and climate matters, combining legal depth, experience, and strategic vision. Additionally, Tzipi lectures on environmental regulation at academic institutions and professional conferences in Israel and abroad. She serves as the Head of the Center for Environmental Protection at Netanya Academic College.',
-        tzipiAwardsTitle: 'Awards & Recognition',
-        tzipiAwardsBody: 'Tzipi has been selected as one of the most influential women in Israel by Globes and TheMarker and has received numerous awards. Winner: "Environmental Lawyer of the Year" (2023 and 2024) by Women in Business Law (EMEA) / IFLR. Tzipi is the only Israeli attorney to win this prestigious personal award for two consecutive years. Ranked by: Chambers & Partners. Department Ranking: The Environment and Climate Department is ranked by the Green Guide of Legal 500.',
-        tzipiEduTitle: 'Education',
-        tzipiEduList: '<li>Ph.D. in Law – Bar-Ilan University (2015)</li><li>LL.M. (Master of Laws) – Tel Aviv University (1997)</li><li>LL.B. (Bachelor of Laws) – Tel Aviv University (1993)</li>',
-        tzipiBarTitle: 'Bar Admission',
-        tzipiBar: 'Israel Bar Association, 1994',
-        tzipiLangTitle: 'Languages',
-        tzipiLang: 'Hebrew, English',
-        talName: 'Tal Granot',
-        talTitle: 'Advocate',
-        talPhone: ' Phone: +972-3-000000',
-        talEmailLabel: ' Email: ',
-        talLinkedIn: 'LinkedIn: Dr. Tzipi Iser Itsiq & Co.',
-        talOffice: ' Office: Icon Tower, 13 Menachem Begin Rd, Ramat Gan',
-        talPracticeTitle: 'Practice Areas',
-        talPracticeList: '<li>Administrative Law</li><li>Environmental Protection, Cleantech & Energy</li>',
-        talExpTitle: 'Professional Experience',
-        talExpBody: 'Tal is a senior attorney at Tzipi Iser Itsiq Law Firm. Her practice focuses primarily on Environmental Protection, Cleantech, and Clean Energy, alongside general Administrative Law. Tal brings extensive experience in the field of environmental protection and public health. Prior to joining the firm, she served as a lawyer and Head of the Health and Environment Department at "Adam Teva V\'Din" (The Israel Union for Environmental Defense). In this capacity, she led litigation and legislation efforts, provided legal counsel, and promoted environmental policy and regulation.',
-        talExpBody2: 'Additionally, Tal serves as a guest lecturer on environmental regulation at various academic institutions. Previously, she worked in the Rights Promotion Division at ALUT (The Israeli Society for Children and Adults with Autism). Tal completed her legal internship at the Central District Attorney\'s Office (Criminal Division).',
-        talEduTitle: 'Education',
-        talEduList: '<li>LL.M. (Public & International Law), with Honors – Tel Aviv University & Northwestern University, Chicago (2012)</li><li>LL.B. (Law) – Tel Aviv University (2008)</li>',
-        talBarTitle: 'Bar Admission',
-        talBar: 'Israel Bar Association, 2009',
-        talLangTitle: 'Languages',
-        talLang: 'Hebrew, English',
-        sagiName: 'Sagi Agmon',
-        sagiTitle: 'Advocate',
-        sagiPhone: ' Phone: +972-3-6070604',
-        sagiEmailLabel: ' Email: ',
-        sagiLinkedIn: 'LinkedIn: Dr. Tzipi Iser Itsiq & Co.',
-        sagiOffice: ' Office: Icon Tower, 13 Menachem Begin Rd, Ramat Gan',
-        sagiPracticeTitle: 'Practice Areas',
-        sagiPracticeList: '<li>Environment & Climate</li><li>Regulation & Administrative Law</li><li>Class Actions & Derivative Suits</li>',
-        sagiExpTitle: 'Professional Experience',
-        sagiExpBody: 'Sagi is a senior attorney at Tzipi Iser Itsiq Law Firm. He possesses extensive experience in Environmental Law, with a particular focus on class actions, alongside over 20 years of experience in Administrative Law. Sagi began his legal career interning at "Adam Teva V\'Din" (Israel Union for Environmental Defense). He subsequently worked as an independent attorney specializing in Non-Profit Law and Administrative Law, and as legal counsel for NGOs such as "Let the Animals Live" and "Hiddush – For Religious Freedom and Equality." In these roles, he led and managed dozens of administrative proceedings, frequently representing clients against local authorities in environmental matters, and was involved in consumer class actions.',
-        sagiExpBody2: 'At the firm, Sagi handles complex environmental class actions, representing both plaintiffs and defendants. Additionally, he provides legal counsel on environmental issues to local authorities, leading organizations, and major companies in the Israeli economy. Furthermore, Sagi provides legal services to leading environmental organizations, including "Green Course" (Megama Yeruka) and the Israel Society of Ecology and Environmental Sciences.',
-        sagiEduTitle: 'Education',
-        sagiEduList: '<li>M.A. in International Relations – Tel Aviv University (2009)</li><li>LL.B. (Law) – University of Haifa (1999)</li>',
-        sagiBarTitle: 'Bar Admission',
-        sagiBar: 'Israel Bar Association, 2001',
-        sagiLangTitle: 'Languages',
-        sagiLang: 'Hebrew, English',
-        careerTitle: 'Career',
-        careerBody1: 'Academic: Lecturer at Netanya Academic College; publications in environmental regulation and administrative law.',
-        careerBody2: 'Opportunities: Always seeking brilliant legal minds passionate about the environment. Send your CV to [email].',
-        contactTitle: 'Dr. Tzipi Iser Itsiq & Co. Law Offices',
-        addr: 'Address: 13 Menachem Begin St, Icon Tower, 4th floor, Ramat Gan, Israel',
-        phone: 'Phone: +972-52-3520267',
-        email: 'Email: Office@tii.com',
-        mapNoteLabel: 'Map:',
-        mapNoteLink: 'Icon Tower - Google Maps',
-        fName: 'Name', fCompany: 'Company', fEmail: 'Email', fPhone: 'Phone', fMsg: 'Message',
-        consent: 'I consent to being contacted.',
-        send: 'Send',
-        footer: '© Dr. Tzipi Iser Itsiq & Co. | Law Firm'
-      }
-    };
-
-    const elements = document.querySelectorAll('[data-i18n]');
-    const btnHe = document.getElementById('btn-he');
-    const btnEn = document.getElementById('btn-en');
-
-    function setLang(lang) {
-      const dict = i18n[lang];
-      document.documentElement.lang = dict.lang;
-      document.documentElement.dir = dict.dir;
-      elements.forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (dict[key]) {
-          // Use innerHTML for list items, textContent otherwise
-          if (key === 'talPracticeList' || key === 'talEduList' || key === 'sagiPracticeList' || key === 'sagiEduList' || key === 'tzipiPracticeList' || key === 'tzipiEduList') {
-            el.innerHTML = dict[key];
-          } else {
-            el.textContent = dict[key];
-          }
-        }
-      });
-      btnHe.classList.toggle('active', lang === 'he');
-      btnEn.classList.toggle('active', lang === 'en');
-    }
-
-    btnHe.addEventListener('click', () => setLang('he'));
-    btnEn.addEventListener('click', () => setLang('en'));
-
-    // Default Hebrew; switch to English if non-IL IP desired (stub)
-    setLang('he');
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -2,24 +2,24 @@
 const i18n = {
   he: {
     dir: 'rtl', lang: 'he',
-    // --- Navigation & General ---
+    // --- Navigation ---
     logo: 'ד"ר ציפי איסר איציק | Law & Regulation',
     navHome: 'דף הבית', navAbout: 'אודות', navExpertise: 'תחומי התמחות', navTeam: 'הצוות', navCareer: 'קריירה', navContact: 'צור קשר',
     navTzipi: 'ד"ר ציפי איסר איציק', navTal: 'טל גרנות', navSagi: 'שגיא אגמון',
 
-    // --- HERO SECTION (Updated to Boutique Style) ---
+    // --- HERO SECTION ("Ilan Sofer" Style) ---
     heroTitle: 'ד"ר ציפי איסר-איציק, עורכי דין',
     heroSub: `משרד בוטיק המתמחה במשפט סביבתי, משבר האקלים וקלינטק, תוך מתן דגש על מצוינות אסטרטגית וליווי אישי.
     אנו מחויבים להשגת התוצאה הטובה ביותר עבור הלקוח, תוך התאמת פתרונות רגולטוריים חכמים למאפיינים הייחודיים של כל תיק ומשבר.
     <strong>המשרד מדורג בעקביות בקטגוריית העילית ("Tier 1") במדריכי הדירוג.</strong>`,
     cta: 'צור קשר',
 
-    // --- SECTIONS ---
-    aboutTitle: 'אודות',
-    aboutBody: `משרד ד"ר ציפי איסר איציק ושות' – משרד עורכי דין, הוקם על-ידי ד"ר ציפי איסר איציק, מהדמויות המובילות בישראל בתחום דיני הסביבה, האקלים ו-ESG.
-    המשרד הוקם לאחר פרישתה מפירמת Lipa & Co., שם כיהנה כשותפה בכירה. קודם לכן כיהנה ד"ר איסר איציק כמנכ"לית "אדם טבע ודין".
-    המשרד מלווה תאגידים פרטיים וציבוריים, רשויות מקומיות וגופים מוסדיים בליווי משפטי ואסטרטגי מקיף, תוך שילוב מומחיות משפטית מעמיקה עם הבנה רגולטורית, כלכלית וניהולית רחבה.`,
+    // --- Footer ---
+    footer: '© ד"ר ציפי איסר איציק ושות\' | משרד עורכי דין',
 
+    // --- HOME PAGE CARDS ---
+    aboutTitle: 'אודות',
+    aboutBody: 'משרד ד"ר ציפי איסר איציק ושות\' הוא משרד בוטיק מוביל בתחומי הסביבה והאקלים. המשרד הוקם על-ידי ד"ר ציפי איסר איציק, לשעבר מנכ"לית אדם טבע ודין, ומעניק ליווי משפטי ואסטרטגי לתאגידים, רשויות וגופים מוסדיים.',
     award: '🏆 פרס: עורכת הדין הסביבתית של השנה (אירופה)',
     phd: '🎓 ד״ר: מומחית לרגולציה סביבתית',
     lead: '🏛️ מנהיגות: לשעבר מנכ״לית אדם טבע ודין',
@@ -32,25 +32,20 @@ const i18n = {
     exp5Title: 'ניהול משברים', exp5Body: 'תגובה משפטית מידית לאירועי סביבה ולליכי אכיפה.',
 
     teamTitle: 'הצוות',
-    teamBody: 'צוות משימתי בהובלת עו״ד ד״ר ציפי איסר איציק. עורכי דין ומתמחים מנוסים בדין מנהלי ומדעי הסביבה, המעניקים ליווי אישי, מדויק ומהיר.',
+    teamBody: 'צוות משימתי בהובלת עו״ד ד״ר ציפי איסר איציק. עורכי דין ומתמחים מנוסים בדין מנהלי ומדעי הסביבה.',
 
     careerTitle: 'קריירה',
     careerBody1: 'אקדמיה: מרצה במכללה האקדמית נתניה; פרסומים בדיני סביבה ורגולציה מנהלית.',
-    careerBody2: 'הזדמנויות: תמיד מחפשים משפטנים מצוינים עם תשוקה לסביבה. שלחו קורות חיים ל-Office@tii.com.',
+    careerBody2: 'הזדמנויות: תמיד מחפשים משפטנים מצוינים. שלחו קורות חיים ל-Office@tii.com.',
 
-    contactTitle: 'ד"ר ציפי איסר איציק ושות\'',
+    contactTitle: 'צור קשר',
     addr: 'כתובת: מנחם בגין 13, מגדל Icon, קומה 4, רמת גן, ישראל',
     phone: 'טלפון: +972-52-3520267',
     email: 'אימייל: Office@tii.com',
-    mapNoteLabel: 'מפה:', mapNote: 'Google Maps', mapNoteLink: 'Icon Tower - ניווט',
+    mapNoteLabel: 'מפה:', mapNoteLink: 'Icon Tower - ניווט',
+    fName: 'שם', fCompany: 'חברה', fEmail: 'אימייל', fPhone: 'טלפון', fMsg: 'הודעה', consent: 'אני מאשר/ת יצירת קשר.', send: 'שליחה',
 
-    // Form
-    fName: 'שם מלא', fCompany: 'חברה', fEmail: 'אימייל', fPhone: 'טלפון', fMsg: 'הודעה',
-    consent: 'אני מאשר/ת יצירת קשר.', send: 'שליחה',
-    footer: '© ד"ר ציפי איסר איציק ושות\' | משרד עורכי דין',
-
-    // --- INDIVIDUAL PROFILES ---
-    // Tzipi
+    // --- TZIPI PROFILE ---
     tzipiName: 'ד"ר ציפי איסר איציק',
     tzipiTitle: 'עורכת דין, שותפה מייסדת',
     tzipiPhone: ' טלפון: 03-6070603',
@@ -69,24 +64,24 @@ const i18n = {
     tzipiBarTitle: 'הסמכה', tzipiBar: 'לשכת עורכי הדין בישראל, 1994',
     tzipiLangTitle: 'שפות', tzipiLang: 'עברית, אנגלית',
 
-    // Tal
+    // --- TAL GRANOT PROFILE ---
     talName: 'טל גרנות',
     talTitle: 'עורכת דין',
     talPhone: ' טלפון: 03-6070600',
     talEmailLabel: ' דוא״ל: ',
-    talLinkedIn: 'LinkedIn',
+    talLinkedIn: 'LinkedIn | vCard | PDF',
     talOffice: ' משרד: מגדל אייקון, דרך מנחם בגין 13, רמת גן',
     talPracticeTitle: 'תחומי עיסוק',
     talPracticeList: '<li>משפט מנהלי</li><li>איכות הסביבה, קלינטק ואנרגיה</li>',
     talExpTitle: 'ניסיון מקצועי',
-    talExpBody: 'טל הינה עורכת דין המתמחה באיכות הסביבה, קלינטק ואנרגיה. טרם הצטרפותה למשרד, כיהנה כראש תחום בריאות וסביבה בעמותת "אדם טבע ודין" והובילה הליכי ליטיגציה וחקיקה מורכבים.',
-    talExpBody2: 'טל מרצה בנושאי רגולציה סביבתית. בעברה עבדה בעמותת אלו״ט והתמחתה בפרקליטות מחוז מרכז (פלילי).',
+    talExpBody: 'עו"ד טל גרנות מתמחה בתחומי הגנת הסביבה, קלינטק, אנרגיה ומשפט מסחרי. טרם הצטרפותה למשרד, כיהנה כראש תחום בריאות וסביבה בארגון "אדם טבע ודין" והובילה הליכי ליטיגציה מורכבים וקידום חקיקה.',
+    talExpBody2: 'ניסיונה המקצועי כולל גם עבודה בקידום זכויות בעמותת אלו"ט. טל ביצעה את התמחותה בפרקליטות מחוז מרכז (פלילי) ומשמשת כמרצה לרגולציה סביבתית.',
     talEduTitle: 'השכלה',
-    talEduList: '<li>תואר שני (LL.M) בהצטיינות – אוניברסיטת תל אביב ואונ\' נורת\'ווסטרן (2012)</li><li>תואר ראשון (LL.B) – אוניברסיטת תל אביב (2008)</li>',
-    talBarTitle: 'הסמכה', talBar: 'לשכת עורכי הדין, 2009',
+    talEduList: '<li>תואר שני (.LL.M) במשפט ציבורי (בהצטיינות) – אוניברסיטת תל אביב ואוניברסיטת נורת\'ווסטרן, שיקגו (2012)</li><li>תואר ראשון (.LL.B) – אוניברסיטת תל אביב (2008)</li>',
+    talBarTitle: 'הסמכה', talBar: 'חברה בלשכת עורכי הדין בישראל, 2009',
     talLangTitle: 'שפות', talLang: 'עברית, אנגלית',
 
-    // Sagi
+    // --- SAGI AGMON PROFILE ---
     sagiName: 'שגיא אגמון',
     sagiTitle: 'עורך דין',
     sagiPhone: ' טלפון: 03-6070604',
@@ -96,33 +91,33 @@ const i18n = {
     sagiPracticeTitle: 'תחומי עיסוק',
     sagiPracticeList: '<li>סביבה ואקלים</li><li>רגולציה ומשפט מנהלי</li><li>תובענות ייצוגיות</li>',
     sagiExpTitle: 'ניסיון מקצועי',
-    sagiExpBody: 'שגיא הינו עורך דין בעל ניסיון של למעלה מ-20 שנה במשפט מנהלי ותובענות ייצוגיות סביבתיות. התמחה ב"אדם טבע ודין" ושימש יועץ משפטי לעמותות מובילות.',
-    sagiExpBody2: 'במשרדנו מטפל שגיא בתובענות ייצוגיות מורכבות ומעניק ייעוץ לרשויות מקומיות, חברות וארגוני סביבה.',
+    sagiExpBody: 'שגיא הינו עורך דין במשרד, בעל ניסיון של למעלה מ-20 שנה במשפט מנהלי ותובענות ייצוגיות סביבתיות. שגיא התמחה בעמותת "אדם טבע ודין" ושימש יועץ משפטי לעמותות מובילות כגון "תנו לחיות לחיות" ו-"חדו"ש".',
+    sagiExpBody2: 'במשרדנו מטפל שגיא בתובענות ייצוגיות מורכבות ומעניק שירותים משפטיים לרשויות מקומיות, חברות מובילות במשק וארגוני סביבה.',
     sagiEduTitle: 'השכלה',
     sagiEduList: '<li>תואר שני ביחסים בינלאומיים (M.A) – אוניברסיטת תל אביב (2009)</li><li>תואר ראשון במשפטים (LL.B) – אוניברסיטת חיפה (1999)</li>',
     sagiBarTitle: 'הסמכה', sagiBar: 'לשכת עורכי הדין בישראל, 2001',
     sagiLangTitle: 'שפות', sagiLang: 'עברית, אנגלית'
   },
 
-  // --- ENGLISH ---
+  // --- ENGLISH TRANSLATIONS ---
   en: {
     dir: 'ltr', lang: 'en',
     logo: 'Dr. Tzipi Iser Itsiq | Law & Regulation',
     navHome: 'Home', navAbout: 'About', navExpertise: 'Expertise', navTeam: 'The Team', navCareer: 'Career', navContact: 'Contact',
     navTzipi: 'Dr. Tzipi Iser Itsiq', navTal: 'Tal Granot', navSagi: 'Sagi Agmon',
 
-    // Hero - Boutique Style
+    // Hero ("Ilan Sofer" Style)
     heroTitle: 'Dr. Tzipi Iser Itsiq Law Firm',
     heroSub: `A boutique law firm specializing in Environmental Law, Climate Change, and Cleantech, with a focus on strategic excellence and personal counsel.
     We are dedicated to achieving the optimal outcome for our clients, tailoring precise regulatory solutions to the unique characteristics of every case and crisis.
     <strong>The firm is consistently ranked in the top tier ("Tier 1") by leading legal directories.</strong>`,
     cta: 'Contact Us',
 
-    aboutTitle: 'About',
-    aboutBody: `Dr. Tzipi Iser Itsiq & Co. is a boutique law firm specializing in Environmental Law, Climate Regulation, and ESG. 
-    Founded by Dr. Tzipi Iser Itsiq, former Partner at Lipa & Co. and former CEO of "Adam Teva V'Din" (Israel Union for Environmental Defense).
-    The firm provides strategic legal advisory services to corporations, local authorities, and institutional clients, combining deep legal expertise with broad regulatory understanding.`,
+    footer: '© Dr. Tzipi Iser Itsiq & Co. | Law Firm',
 
+    // Home Page Cards
+    aboutTitle: 'About',
+    aboutBody: 'Dr. Tzipi Iser Itsiq & Co. is a boutique law firm specializing in Environmental Law, Climate Regulation, and ESG. Founded by Dr. Tzipi Iser Itsiq, former CEO of "Adam Teva V\'Din", the firm provides strategic legal counsel to corporations, municipalities, and institutions.',
     award: '🏆 Award: Environmental Lawyer of the Year (Europe)',
     phd: '🎓 PhD: Environmental Regulation Expert',
     lead: '🏛️ Leadership: Former CEO, Israel Union for Environmental Defense',
@@ -135,23 +130,20 @@ const i18n = {
     exp5Title: 'Crisis Management', exp5Body: 'Immediate legal response to environmental incidents and enforcement actions.',
 
     teamTitle: 'The Team',
-    teamBody: 'A dedicated task force led by Dr. Iser Itsiq. Senior attorneys and interns in administrative law and environmental sciences deliver personalized, precise, and rapid counsel.',
+    teamBody: 'A dedicated task force led by Dr. Iser Itsiq. Senior attorneys and interns in administrative law and environmental sciences.',
 
     careerTitle: 'Career',
     careerBody1: 'Academic: Lecturer at Netanya Academic College; publications in environmental regulation.',
     careerBody2: 'Opportunities: Always seeking brilliant legal minds. Send your CV to Office@tii.com.',
 
-    contactTitle: 'Dr. Tzipi Iser Itsiq & Co.',
+    contactTitle: 'Contact Us',
     addr: 'Address: 13 Menachem Begin St, Icon Tower, 4th floor, Ramat Gan, Israel',
     phone: 'Phone: +972-52-3520267',
     email: 'Email: Office@tii.com',
-    mapNoteLabel: 'Map:', mapNote: 'Google Maps', mapNoteLink: 'Icon Tower - Navigation',
+    mapNoteLabel: 'Map:', mapNoteLink: 'Icon Tower - Navigation',
+    fName: 'Name', fCompany: 'Company', fEmail: 'Email', fPhone: 'Phone', fMsg: 'Message', consent: 'I consent to being contacted.', send: 'Send',
 
-    fName: 'Full Name', fCompany: 'Company', fEmail: 'Email', fPhone: 'Phone', fMsg: 'Message',
-    consent: 'I consent to be contacted.', send: 'Send',
-    footer: '© Dr. Tzipi Iser Itsiq & Co. | Law Firm',
-
-    // Tzipi
+    // Tzipi Profile
     tzipiName: 'Dr. Tzipi Iser Itsiq',
     tzipiTitle: 'Founding Partner',
     tzipiPhone: ' Phone: +972-3-6070603',
@@ -170,24 +162,24 @@ const i18n = {
     tzipiBarTitle: 'Bar Admission', tzipiBar: 'Israel Bar Association, 1994',
     tzipiLangTitle: 'Languages', tzipiLang: 'Hebrew, English',
 
-    // Tal
+    // Tal Granot Profile
     talName: 'Tal Granot',
     talTitle: 'Advocate',
     talPhone: ' Phone: +972-3-6070600',
     talEmailLabel: ' Email: ',
-    talLinkedIn: 'LinkedIn',
+    talLinkedIn: 'LinkedIn | vCard | PDF',
     talOffice: ' Office: Icon Tower, 13 Menachem Begin Rd, Ramat Gan',
     talPracticeTitle: 'Practice Areas',
     talPracticeList: '<li>Administrative Law</li><li>Environmental Protection, Cleantech & Energy</li>',
     talExpTitle: 'Professional Experience',
-    talExpBody: 'Tal specializes in Environmental Protection and Cleantech. Previously Head of Health and Environment Dept at "Adam Teva V\'Din".',
-    talExpBody2: 'Lecturer on environmental regulation. Interned at Central District Attorney\'s Office (Criminal).',
+    talExpBody: 'Adv. Tal Granot specializes in Environmental Protection, Cleantech, and Energy. Prior to joining the firm, she served as Head of the Health and Environment Department at "Adam Teva V’Din" (Israel Union for Environmental Defense), leading complex litigation and legislation.',
+    talExpBody2: 'Her background includes working at ALUT (Autism Society) and interning at the Central District Attorney\'s Office (Criminal). Tal lectures on environmental regulation at academic institutions.',
     talEduTitle: 'Education',
-    talEduList: '<li>LL.M. (Public & International Law) – Tel Aviv University & Northwestern University (2012)</li><li>LL.B. – Tel Aviv University (2008)</li>',
+    talEduList: '<li>LL.M. (Public Law), with Honors – Tel Aviv University & Northwestern University, Chicago (2012)</li><li>LL.B. – Tel Aviv University (2008)</li>',
     talBarTitle: 'Bar Admission', talBar: 'Israel Bar Association, 2009',
     talLangTitle: 'Languages', talLang: 'Hebrew, English',
 
-    // Sagi
+    // Sagi Agmon Profile
     sagiName: 'Sagi Agmon',
     sagiTitle: 'Advocate',
     sagiPhone: ' Phone: +972-3-6070604',
@@ -197,8 +189,8 @@ const i18n = {
     sagiPracticeTitle: 'Practice Areas',
     sagiPracticeList: '<li>Environment & Climate</li><li>Regulation & Administrative Law</li><li>Class Actions</li>',
     sagiExpTitle: 'Professional Experience',
-    sagiExpBody: 'Sagi has over 20 years of experience in Administrative Law and Environmental Class Actions. Former legal counsel for leading NGOs.',
-    sagiExpBody2: 'He handles complex class actions and advises local authorities and major companies.',
+    sagiExpBody: 'Sagi is a senior attorney with over 20 years of experience in Administrative Law and Environmental Class Actions. He interned at "Adam Teva V\'Din" and served as legal counsel for leading NGOs including "Let the Animals Live".',
+    sagiExpBody2: 'At the firm, Sagi handles complex environmental class actions and provides legal counsel to local authorities, major corporations, and environmental organizations.',
     sagiEduTitle: 'Education',
     sagiEduList: '<li>M.A. in International Relations – Tel Aviv University (2009)</li><li>LL.B. – University of Haifa (1999)</li>',
     sagiBarTitle: 'Bar Admission', sagiBar: 'Israel Bar Association, 2001',
@@ -206,7 +198,7 @@ const i18n = {
   }
 };
 
-// --- LOGIC TO HANDLE TRANSLATION & HTML UPDATES ---
+// --- LOGIC ---
 const elements = document.querySelectorAll('[data-i18n]');
 const btnHe = document.getElementById('btn-he');
 const btnEn = document.getElementById('btn-en');
@@ -219,8 +211,8 @@ function setLang(lang) {
   elements.forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (dict[key]) {
-      // Use innerHTML for fields that might contain tags (like lists or strong)
-      if (key.includes('List') || key === 'heroSub' || key === 'aboutBody' || key === 'tzipiExpBody') {
+      // Use innerHTML for fields that might contain HTML tags (lists, bold)
+      if (key.includes('List') || key === 'heroSub' || key === 'aboutBody' || key.includes('ExpBody')) {
         el.innerHTML = dict[key];
       } else {
         el.textContent = dict[key];
@@ -234,7 +226,6 @@ function setLang(lang) {
   }
 }
 
-// Event Listeners
 if (btnHe) btnHe.addEventListener('click', () => setLang('he'));
 if (btnEn) btnEn.addEventListener('click', () => setLang('en'));
 
