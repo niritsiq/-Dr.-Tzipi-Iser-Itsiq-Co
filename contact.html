@@ -56,7 +56,8 @@
           data-i18n="mapNoteLink"></a></p>
     </div>
 
-    <form action="mailto:Office@tii.com" method="post" enctype="text/plain">
+    <form name="contact" method="POST" data-netlify="true" action="/success.html">
+      <input type="hidden" name="form-name" value="contact" />
       <div class="form-group">
         <label for="name" data-i18n="fName"></label>
         <input type="text" id="name" name="name" required>
