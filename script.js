@@ -119,7 +119,15 @@ const i18n = {
 
     // Home Page Cards
     aboutTitle: 'About',
-    aboutBody: 'Dr. Tzipi Iser Itsiq & Co. is a boutique law firm specializing in Environmental Law, Climate Regulation, and ESG. Founded by Dr. Tzipi Iser Itsiq, former CEO of "Adam Teva V\'Din", the firm provides strategic legal counsel to corporations, municipalities, and institutions.',
+    aboutBody: `Dr. Tzipi Iser Itsiq & Co. is a boutique law firm specializing in Environmental Law, Climate Regulation, and ESG, providing strategic legal counsel to corporations, public bodies, and international clients operating in complex regulatory environments.
+
+The firm was founded by Dr. Tzipi Iser Itsiq, one of Israel’s leading experts in environmental and climate law, with over 30 years of professional experience. Dr. Iser Itsiq previously served as a Senior Partner and Head of the Environmental and Climate Practice at Lipa & Co., and as CEO of Adam Teva V’Din – the Israel Union for Environmental Defense, where she led high‑impact litigation, regulatory initiatives, and national environmental and climate policy processes.
+
+The firm is supported by a highly experienced legal team that has worked closely with Dr. Iser Itsiq for many years, including in legal and public‑interest environmental work. The team brings substantial experience engaging with regulators, governmental bodies, municipalities, corporate entities, and courts across a wide range of complex environmental, climate, and ESG matters.
+
+Combining deep legal expertise with a strategic understanding of regulatory systems, governance, and international sustainability standards, the firm provides practical, results‑oriented legal solutions tailored to the regulatory, commercial, and reputational needs of each client.
+
+Areas of expertise include: environmental and climate law, environmental regulation and enforcement, ESG and corporate sustainability, administrative and public law litigation, infrastructure and energy projects, and advisory on cross‑border regulatory and climate‑related risks.`,
     award: '🏆 Award: Environmental Lawyer of the Year (Europe)',
     phd: '🎓 PhD: Environmental Regulation Expert',
     lead: '🏛️ Leadership: Former CEO, Israel Union for Environmental Defense',
