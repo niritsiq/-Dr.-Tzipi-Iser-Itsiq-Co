@@ -3,11 +3,21 @@
 
 <head>
   <meta charset="UTF-8" />
+  <!-- Anti-flickering script -->
+  <script>
+    var timeout = 3000; // Timeout value to remove the flicker (in milliseconds)
+    !function (h, i, d, e) { var t, n = h.createElement("style"); n.id = e, n.innerHTML = "body{opacity:0}", h.head.appendChild(n), t = d, i.rmfk = function () { var t = h.getElementById(e); t && t.parentNode.removeChild(t) }, setTimeout(i.rmfk, t) }(document, window, timeout, "abhide");
+  </script>
+
+  <!-- Mida A/B Testing Script (Place in <HEAD> for speed & no flicker) -->
+  <script type="text/javascript" async src="https://cdn.mida.so/js/optimize.js?key=1rZ95mgaRyK0qdeyvJKlzx"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>צור קשר | Dr. Tzipi Iser Itsiq & Co.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Assistant:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
