@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>טל גרנות | Dr. Tzipi Iser Itsiq & Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Assistant:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f1e3a;
+      --sage: #5c8a7a;
+      --light: #f6f8fb;
+      --text: #1f2a3d;
+      --maxw: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Assistant', 'Lato', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #fff;
+      border-bottom: 1px solid #e3e8ef;
+    }
+
+    .nav {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 28px;
+      padding: 18px 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 15px;
+    }
+
+    .logo img {
+      height: 48px;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 15px;
+      transition: color 0.2s;
+      padding: 6px 2px;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: var(--sage);
+    }
+
+    /* Dropdown Menu Styles */
+    .nav-item {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: white;
+      min-width: 200px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding: 8px 0;
+      z-index: 1000;
+      margin-top: 8px;
+    }
+
+    [dir="ltr"] .dropdown-menu {
+      right: auto;
+      left: 0;
+    }
+
+    .nav-item:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 20px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+      background: var(--light);
+      color: var(--sage);
+    }
+
+    .dropdown-arrow {
+      display: inline-block;
+      margin-right: 4px;
+      transition: transform 0.2s;
+    }
+
+    [dir="ltr"] .dropdown-arrow {
+      margin-right: 0;
+      margin-left: 4px;
+    }
+
+    .nav-item:hover .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+
+    .lang-toggle {
+      display: flex;
+      gap: 10px;
+      justify-self: start;
+    }
+
+    .lang-btn {
+      border: 1px solid var(--navy);
+      background: transparent;
+      color: var(--navy);
+      padding: 6px 14px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 13px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .lang-btn:hover,
+    .lang-btn.active {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    section {
+      max-width: var(--maxw);
+      margin: 60px auto;
+      padding: 0 30px;
+    }
+
+    h2 {
+      font-size: 32px;
+      color: var(--navy);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .team-card {
+      border: 1px solid #e3e8ef;
+      border-radius: 12px;
+      padding: 24px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .team-photo-wrapper {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .team-photo {
+      width: 220px;
+      height: 280px;
+      border-radius: 8px;
+      object-fit: cover;
+      background: #dfe6ef;
+      border: 1px solid #e3e8ef;
+    }
+
+    .team-info {
+      text-align: right;
+    }
+
+    [dir="ltr"] .team-info {
+      text-align: left;
+    }
+
+    .team-name {
+      font-size: 28px;
+      color: var(--navy);
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .team-title {
+      font-size: 18px;
+      color: var(--sage);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .team-contact {
+      background: var(--light);
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .team-contact p {
+      margin-bottom: 8px;
+    }
+
+    .team-contact p:last-child {
+      margin-bottom: 0;
+    }
+
+    .linkedin-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .linkedin-link:hover {
+      color: #0077b5;
+      text-decoration: underline;
+    }
+
+    .team-section {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e3e8ef;
+    }
+
+    .team-section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .team-section h4 {
+      font-size: 16px;
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .team-section p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .team-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .team-section ul {
+      list-style: none;
+      padding-right: 0;
+    }
+
+    [dir="ltr"] .team-section ul {
+      padding-left: 0;
+    }
+
+    .team-section ul li {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 8px;
+      padding-right: 18px;
+      position: relative;
+    }
+
+    [dir="ltr"] .team-section ul li {
+      padding-left: 18px;
+      padding-right: 0;
+    }
+
+    .team-section ul li:before {
+      content: '•';
+      position: absolute;
+      right: 0;
+      color: var(--sage);
+      font-weight: bold;
+    }
+
+    [dir="ltr"] .team-section ul li:before {
+      left: 0;
+      right: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #4a5568;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <span data-i18n="logo">עו״ד ד״ר ציפי איסר איציק | Law & Regulation</span>
+      </div>
+      <nav>
+        <a href="index.html#about" data-i18n="navAbout">אודות</a>
+        <a href="index.html#expertise" data-i18n="navExpertise">תחומי התמחות</a>
+        <div class="nav-item">
+          <a href="index.html#team" data-i18n="navTeam">
+            <span class="dropdown-arrow">▼</span>
+            הצוות
+          </a>
+          <div class="dropdown-menu">
+            <a href="tzipi.html" data-i18n="navTzipi">ד"ר ציפי איסר איציק</a>
+            <a href="tal.html" data-i18n="navTal">טל גרנות</a>
+            <a href="sagi.html" data-i18n="navSagi">שגיא אגמון</a>
+          </div>
+        </div>
+        <a href="index.html#career" data-i18n="navCareer">קריירה</a>
+        <a href="index.html#contact" data-i18n="navContact">צור קשר</a>
+      </nav>
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-he">עב</button>
+        <button class="lang-btn" id="btn-en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="team">
+    <h2 data-i18n="teamTitle">הצוות</h2>
+
+    <!-- Tal Granot Profile -->
+    <div class="team-card">
+      <div class="team-photo-wrapper">
+        <img src="tal-granot-photo.jpg" alt="Tal Granot" class="team-photo">
+      </div>
+      <div class="team-info">
+        <h3 class="team-name" data-i18n="talName">טל גרנות</h3>
+        <p class="team-title" data-i18n="talTitle">עורכת דין</p>
+
+        <div class="team-contact">
+          <p data-i18n="talPhone"> טלפון: 03-000000</p>
+          <p>
+            <span data-i18n="talEmailLabel"> דוא״ל: </span>
+            <a href="mailto:tal.g@tii.co.il" class="linkedin-link">tal.g@tii.co.il</a>
+          </p>
+          <p>
+            <a href="https://www.linkedin.com/in/dr-tzipi-iser-itsiq-23b5631b/" target="_blank" rel="noopener"
+              class="linkedin-link">
+              <span></span>
+              <span data-i18n="talLinkedIn">LinkedIn</span>
+            </a>
+          </p>
+          <p data-i18n="talOffice"> משרד: מגדל אייקון, דרך מנחם בגין 13, רמת גן</p>
+        </div>
+
+        <div class="team-section">
+          <h4 data-i18n="talPracticeTitle">תחומי עיסוק</h4>
+          <ul data-i18n="talPracticeList">
+            <li>משפט מנהלי</li>
+            <li>איכות הסביבה, קלינטק ואנרגיה</li>
+          </ul>
+        </div>
+
+        <div class="team-section">
+          <h4 data-i18n="talExpTitle">ניסיון מקצועי</h4>
+          <p data-i18n="talExpBody">
+            טל הינה עורכת דין במשרד ציפי איסר איציק. תחומי התמחותה העיקריים הינם איכות הסביבה, קלינטק ואנרגיה, לצד
+            עיסוק במשפט מנהלי. טל בעלת ניסיון נרחב בתחום הגנת הסביבה ובריאות הציבור. טרם הצטרפותה למשרד, כיהנה כעורכת
+            דין וראש תחום בריאות וסביבה בעמותת "אדם טבע ודין". במסגרת זו עסקה בליטיגציה ובחקיקה, ייעוץ משפטי, ניסוח
+            וקידום הצעות חוק וקידום מדיניות סביבתית.
+          </p>
+          <p data-i18n="talExpBody2">
+            בנוסף, טל מרצה בנושאי רגולציה סביבתית בגופים אקדמיים. בעברה, עבדה באגף לקידום זכויות בעמותת אלו״ט - אגודה
+            לאומית לילדים אוטיסטים. את התמחותה המשפטית עשתה טל בפרקליטות מחוז מרכז (פלילי).
+          </p>
+        </div>
+
+        <div class="team-section">
+          <h4 data-i18n="talEduTitle">השכלה</h4>
+          <ul data-i18n="talEduList">
+            <li>תואר שני כפול במשפט ציבורי ובינלאומי (LL.M) בהצטיינות – אוניברסיטת תל אביב ואוניברסיטת נורת'ווסטרן,
+              שיקגו (2012)</li>
+            <li>תואר ראשון במשפטים (LL.B) – אוניברסיטת תל אביב (2008)</li>
+          </ul>
+        </div>
+
+        <div class="team-section">
+          <h4 data-i18n="talBarTitle">הסמכה</h4>
+          <p data-i18n="talBar">לשכת עורכי הדין, 2009</p>
+        </div>
+
+        <div class="team-section">
+          <h4 data-i18n="talLangTitle">שפות</h4>
+          <p data-i18n="talLang">עברית, אנגלית</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p data-i18n="footer">© ד"ר ציפי איסר איציק ושות' | משרד עורכי דין</p>
+  </footer>
+
+  <script>
+    const i18n = {
+      he: {
+        dir: 'rtl', lang: 'he',
+        logo: 'ד"ר ציפי איסר איציק ושות\' | משרד עורכי דין',
+        navAbout: 'אודות', navExpertise: 'תחומי התמחות', navTeam: 'הצוות', navCareer: 'קריירה', navContact: 'צור קשר',
+        navTzipi: 'ד"ר ציפי איסר איציק', navTal: 'טל גרנות', navSagi: 'שגיא אגמון',
+        teamTitle: 'הצוות',
+        talName: 'טל גרנות',
+        talTitle: 'עורכת דין',
+        talPhone: ' טלפון: 03-00000',
+        talEmailLabel: ' דוא״ל: ',
+        talLinkedIn: 'לינקדין: ד"ר ציפי איסר איציק ושות\'',
+        talOffice: ' משרד: מגדל אייקון, דרך מנחם בגין 13, רמת גן',
+        talPracticeTitle: 'תחומי עיסוק',
+        talPracticeList: '<li>משפט מנהלי</li><li>איכות הסביבה, קלינטק ואנרגיה</li>',
+        talExpTitle: 'ניסיון מקצועי',
+        talExpBody: 'טל הינה עורכת דין במשרד ציפי איסר איציק. תחומי התמחותה העיקריים הינם איכות הסביבה, קלינטק ואנרגיה, לצד עיסוק במשפט מנהלי. טל בעלת ניסיון נרחב בתחום הגנת הסביבה ובריאות הציבור. טרם הצטרפותה למשרד, כיהנה כעורכת דין וראש תחום בריאות וסביבה בעמותת "אדם טבע ודין". במסגרת זו עסקה בליטיגציה ובחקיקה, ייעוץ משפטי, ניסוח וקידום הצעות חוק וקידום מדיניות סביבתית.',
+        talExpBody2: 'בנוסף, טל מרצה בנושאי רגולציה סביבתית בגופים אקדמיים. בעברה, עבדה באגף לקידום זכויות בעמותת אלו״ט - אגודה לאומית לילדים אוטיסטים. את התמחותה המשפטית עשתה טל בפרקליטות מחוז מרכז (פלילי).',
+        talEduTitle: 'השכלה',
+        talEduList: '<li>תואר שני כפול במשפט ציבורי ובינלאומי (LL.M) בהצטיינות – אוניברסיטת תל אביב ואוניברסיטת נורת\'ווסטרן, שיקגו (2012)</li><li>תואר ראשון במשפטים (LL.B) – אוניברסיטת תל אביב (2008)</li>',
+        talBarTitle: 'הסמכה',
+        talBar: 'לשכת עורכי הדין, 2009',
+        talLangTitle: 'שפות',
+        talLang: 'עברית, אנגלית',
+        footer: '© ד"ר ציפי איסר איציק ושות\' | משרד עורכי דין'
+      },
+      en: {
+        dir: 'ltr', lang: 'en',
+        logo: 'Dr. Tzipi Iser Itsiq & Co. | Law Firm',
+        navAbout: 'About', navExpertise: 'Expertise', navTeam: 'The Team', navCareer: 'Career', navContact: 'Contact',
+        navTzipi: 'Dr. Tzipi Iser Itsiq', navTal: 'Tal Granot', navSagi: 'Sagi Agmon',
+        teamTitle: 'The Team',
+        talName: 'Tal Granot',
+        talTitle: 'Advocate',
+        talPhone: ' Phone: +972-3-000000',
+        talEmailLabel: ' Email: ',
+        talLinkedIn: 'LinkedIn: Dr. Tzipi Iser Itsiq & Co.',
+        talOffice: ' Office: Icon Tower, 13 Menachem Begin Rd, Ramat Gan',
+        talPracticeTitle: 'Practice Areas',
+        talPracticeList: '<li>Administrative Law</li><li>Environmental Protection, Cleantech & Energy</li>',
+        talExpTitle: 'Professional Experience',
+        talExpBody: 'Tal is a senior attorney at Tzipi Iser Itsiq Law Firm. Her practice focuses primarily on Environmental Protection, Cleantech, and Clean Energy, alongside general Administrative Law. Tal brings extensive experience in the field of environmental protection and public health. Prior to joining the firm, she served as a lawyer and Head of the Health and Environment Department at "Adam Teva V\'Din" (The Israel Union for Environmental Defense). In this capacity, she led litigation and legislation efforts, provided legal counsel, and promoted environmental policy and regulation.',
+        talExpBody2: 'Additionally, Tal serves as a guest lecturer on environmental regulation at various academic institutions. Previously, she worked in the Rights Promotion Division at ALUT (The Israeli Society for Children and Adults with Autism). Tal completed her legal internship at the Central District Attorney\'s Office (Criminal Division).',
+        talEduTitle: 'Education',
+        talEduList: '<li>LL.M. (Public & International Law), with Honors – Tel Aviv University & Northwestern University, Chicago (2012)</li><li>LL.B. (Law) – Tel Aviv University (2008)</li>',
+        talBarTitle: 'Bar Admission',
+        talBar: 'Israel Bar Association, 2009',
+        talLangTitle: 'Languages',
+        talLang: 'Hebrew, English',
+        footer: '© Dr. Tzipi Iser Itsiq & Co. | Law Firm'
+      }
+    };
+
+    const elements = document.querySelectorAll('[data-i18n]');
+    const btnHe = document.getElementById('btn-he');
+    const btnEn = document.getElementById('btn-en');
+
+    function setLang(lang) {
+      const dict = i18n[lang];
+      document.documentElement.lang = dict.lang;
+      document.documentElement.dir = dict.dir;
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          if (key === 'talPracticeList' || key === 'talEduList') {
+            el.innerHTML = dict[key];
+          } else {
+            el.textContent = dict[key];
+          }
+        }
+      });
+      btnHe.classList.toggle('active', lang === 'he');
+      btnEn.classList.toggle('active', lang === 'en');
+    }
+
+    btnHe.addEventListener('click', () => setLang('he'));
+    btnEn.addEventListener('click', () => setLang('en'));
+
+    setLang('he');
+  </script>
+</body>
+
+</html>
