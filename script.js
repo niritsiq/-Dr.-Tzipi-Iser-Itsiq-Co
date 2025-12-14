@@ -34,7 +34,7 @@ const i18n = {
     exp5Title: 'ניהול משברים', exp5Body: 'תגובה משפטית מידית לאירועי סביבה ולליכי אכיפה.',
 
     teamTitle: 'הצוות',
-    teamBody: 'צוות משימתי בהובלת עו״ד ד״ר ציפי איסר איציק. עורכי דין ומתמחים מנוסים בדין מנהלי ומדעי הסביבה.',
+    teamBody: 'צוות משימתי בהובלת עו״ד ד״ר ציפי איסר איציק. עורכי דין  מנוסים בדין מנהלי ומדעי הסביבה.',
 
     careerTitle: 'קריירה',
     careerBody1: 'אקדמיה: מרצה במכללה האקדמית נתניה; פרסומים בדיני סביבה ורגולציה מנהלית.',
@@ -141,7 +141,7 @@ Areas of expertise include: environmental and climate law, environmental regulat
     exp5Title: 'Crisis Management', exp5Body: 'Immediate legal response to environmental incidents and enforcement actions.',
 
     teamTitle: 'The Team',
-    teamBody: 'A dedicated task force led by Dr. Iser Itsiq. Senior attorneys and interns in administrative law and environmental sciences.',
+    teamBody: 'A dedicated task force led by Dr. Iser Itsiq. Senior attorneys in administrative law and environmental sciences.',
 
     careerTitle: 'Career',
     careerBody1: 'Academic: Lecturer at Netanya Academic College; publications in environmental regulation.',
