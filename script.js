@@ -92,14 +92,14 @@ const i18n = {
     sagiLinkedIn: 'שגיא אגמון',
     sagiOffice: ' משרד: מגדל אייקון, דרך מנחם בגין 13, רמת גן',
     sagiPracticeTitle: 'תחומי עיסוק',
-    sagiPracticeList: '<li>סביבה ואקלים</li><li>רגולציה ומשפט מנהלי</li><li>תובענות ייצוגיות</li>',
+    sagiPracticeList: '<li>משפט סביבתי ומינהלי</li><li>ליטיגציה והליכים משפטיים מורכבים</li><li>תכנון ובנייה וליווי רשויות מקומיות</li><li>סביבה, אקלים ו-ESG</li><li>דיני עמותות ומשפט מנהלי</li>',
     sagiExpTitle: 'ניסיון מקצועי',
-    sagiExpBody: 'שגיא הינו עורך דין במשרד, בעל ניסיון של למעלה מ-20 שנה במשפט מנהלי ותובענות ייצוגיות סביבתיות. שגיא התמחה בעמותת "אדם טבע ודין" ושימש יועץ משפטי לעמותות מובילות כגון "תנו לחיות לחיות" ו-"חדו"ש".',
-    sagiExpBody2: 'במשרדנו מטפל שגיא בתובענות ייצוגיות מורכבות ומעניק שירותים משפטיים לרשויות מקומיות, חברות מובילות במשק וארגוני סביבה.',
+    sagiExpBody: 'לשגיא ניסיון של למעלה מ-20 שנה במשפט סביבתי ומינהלי, במהלכן ייצג מגוון רחב של גופים ולקוחות. היכרותו המקיפה עם אתגרי הסביבה בישראל ובעולם ובקיאותו המשפטית בתחומים הרלוונטיים מאפשרת לו לספק מענה יצירתי, יסודי ומותאם לצרכיהם של לקוחות שונים, בין אם מדובר בתיקי ליטיגציה והליכים משפטיים מורכבים, בסוגיות תכנוניות, בליווי וייעוץ לפעילות הסביבתית ברשויות מקומיות, בהתנהלות סביבתית נכונה של חברות מסחריות וממשקי העבודה למול הרגולטורים, או בהתנהלות בסוגיות משפטיות מורכבות של מלכ"רים.',
+    sagiExpBody2: 'שגיא מלווה עסקאות והליכים תכנוניים מהפן הסביבתי, ועוסק במתן ייעוץ שוטף בתחומי סביבה, אקלים ו-ESG למגוון רחב של לקוחות.\nשגיא התמחה בעמותת "אדם טבע ודין", הוסמך כעורך דין בשנת 2001, ובהמשך שימש, בין היתר, כיועץ משפטי בעמותות שונות כגון "תנו לחיות לחיות" ועמותת "חדו"ש – לחופש דת ושוויון", וכן עבד שנים ארוכות כעו"ד עצמאי המתמחה בדיני עמותות, משפט המינהלי, זכויות אדם וזכויות בעלי חיים.',
     sagiEduTitle: 'השכלה',
     sagiEduList: '<li>תואר שני ביחסים בינלאומיים (M.A) – אוניברסיטת תל אביב (2009)</li><li>תואר ראשון במשפטים (LL.B) – אוניברסיטת חיפה (1999)</li>',
     sagiBarTitle: 'הסמכה', sagiBar: 'לשכת עורכי הדין בישראל, 2001',
-    sagiLangTitle: 'שפות', sagiLang: 'עברית, אנגלית'
+    sagiLangTitle: 'שפות', sagiLang: 'עברית, אנגלית, שוודית, נורווגית, דנית, הולנדית, צרפתית, פורטוגזית (חלקית)'
   },
 
   // --- ENGLISH TRANSLATIONS ---
@@ -199,14 +199,14 @@ Areas of expertise include: environmental and climate law, environmental regulat
     sagiLinkedIn: 'Sagi Agmon',
     sagiOffice: ' Office: Icon Tower, 13 Menachem Begin Rd, Ramat Gan',
     sagiPracticeTitle: 'Practice Areas',
-    sagiPracticeList: '<li>Environment & Climate</li><li>Regulation & Administrative Law</li><li>Class Actions</li>',
+    sagiPracticeList: '<li>Environmental and Administrative Law</li><li>Litigation and Complex Legal Proceedings</li><li>Planning and Construction, and Municipal Counsel</li><li>Environment, Climate, and ESG</li><li>NGO Law and Administrative Law</li>',
     sagiExpTitle: 'Professional Experience',
-    sagiExpBody: 'Sagi is a senior attorney with over 20 years of experience in Administrative Law and Environmental Class Actions. He interned at "Adam Teva V\'Din" and served as legal counsel for leading NGOs including "Let the Animals Live".',
-    sagiExpBody2: 'At the firm, Sagi handles complex environmental class actions and provides legal counsel to local authorities, major corporations, and environmental organizations.',
+    sagiExpBody: 'Sagi has over 20 years of experience in environmental and administrative law, during which he has represented a wide range of entities and clients. His comprehensive familiarity with environmental challenges in Israel and globally, combined with his legal expertise in relevant fields, enables him to provide creative, thorough, and tailored solutions to various clients\' needs. This includes complex litigation cases, planning issues, counseling local authorities on environmental activities, guiding commercial companies in proper environmental conduct and regulatory interfaces, and handling complex legal issues for non-profits.',
+    sagiExpBody2: 'Sagi accompanies transactions and planning procedures from an environmental perspective and provides ongoing counsel in the fields of environment, climate, and ESG to a wide range of clients.\nSagi interned at "Adam Teva V\'Din" (Israel Union for Environmental Defense), was admitted to the bar in 2001, and subsequently served, among other roles, as legal counsel for various non-profits such as "Let the Animals Live" and "Hiddush – For Religious Freedom and Equality". He also worked for many years as an independent attorney specializing in non-profit law, administrative law, human rights, and animal rights.',
     sagiEduTitle: 'Education',
     sagiEduList: '<li>M.A. in International Relations – Tel Aviv University (2009)</li><li>LL.B. – University of Haifa (1999)</li>',
     sagiBarTitle: 'Bar Admission', sagiBar: 'Israel Bar Association, 2001',
-    sagiLangTitle: 'Languages', sagiLang: 'Hebrew, English'
+    sagiLangTitle: 'Languages', sagiLang: 'Hebrew, English, Swedish, Norwegian, Danish, Dutch, French, Portuguese (partial proficiency)'
   }
 };
 
