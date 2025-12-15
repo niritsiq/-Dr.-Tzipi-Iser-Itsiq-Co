@@ -146,7 +146,8 @@ const i18n = {
     a11ySmallerFontActivated: 'גופן קטן הופעל',
     a11ySmallerFontDeactivated: 'גופן קטן כובה',
     a11yResetActivated: 'הגדרות נגישות אופסו',
-    a11yMsg: 'הודעת מערכת'
+    a11yMsg: 'הודעת מערכת',
+    a11yStatement: 'הצהרת נגישות'
   },
 
   // --- ENGLISH TRANSLATIONS ---
@@ -300,7 +301,8 @@ Areas of expertise include: environmental and climate law, environmental regulat
     a11ySmallerFontActivated: 'Smaller font activated',
     a11ySmallerFontDeactivated: 'Smaller font deactivated',
     a11yResetActivated: 'Accessibility settings reset',
-    a11yMsg: 'System Notification'
+    a11yMsg: 'System Notification',
+    a11yStatement: 'Accessibility Statement'
   }
 };
 
@@ -331,6 +333,12 @@ function setLang(lang) {
   if (btnHe && btnEn) {
     btnHe.classList.toggle('active', lang === 'he');
     btnEn.classList.toggle('active', lang === 'en');
+  }
+
+  // Update Accessibility Statement Link
+  const a11yLink = document.getElementById('a11y-statement-link');
+  if (a11yLink) {
+    a11yLink.href = lang === 'he' ? 'accessibility-statement.html' : 'accessibility-statement-en.html';
   }
 }
 
@@ -409,6 +417,9 @@ setLang('he');
           <div class="a11y-icon">↺</div>
           <span data-i18n="a11yReset">איפוס</span>
         </div>
+      </div>
+      <div class="a11y-footer">
+        <a href="accessibility-statement.html" target="_blank" class="a11y-statement-link" id="a11y-statement-link" data-i18n="a11yStatement">הצהרת נגישות</a>
       </div>
     </div>
     <div class="a11y-notification" id="a11y-notification">
