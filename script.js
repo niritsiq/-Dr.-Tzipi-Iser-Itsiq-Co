@@ -113,6 +113,38 @@ const i18n = {
     a11yLowContrastDeactivated: 'ניגודיות נמוכה כובתה',
     a11yGrayscaleActivated: 'מצב גווני אפור הופעל',
     a11yGrayscaleDeactivated: 'מצב גווני אפור כובה',
+    a11yReadableFont: 'טקסט מודגש',
+    a11yReadableFontActivated: 'טקסט מודגש הופעל',
+    a11yReadableFontDeactivated: 'טקסט מודגש כובה',
+    a11yHighlightLinks: 'הדגשת קישורים',
+    a11yHighlightLinksActivated: 'הדגשת קישורים הופעלה',
+    a11yHighlightLinksDeactivated: 'הדגשת קישורים כובתה',
+    a11yBigCursor: 'סמן גדול',
+    a11yBigCursorActivated: 'סמן גדול הופעל',
+    a11yBigCursorDeactivated: 'סמן גדול כובה',
+    a11yCursorColor: 'צבע סמן',
+    a11yCursorColorBlack: 'סמן שחור',
+    a11yCursorColorWhite: 'סמן לבן',
+    a11yCursorColorYellow: 'סמן צהוב',
+    a11yCursorColorRed: 'סמן אדום',
+    a11yHideImages: 'הסתרת תמונות',
+    a11yHideImagesActivated: 'הסתרת תמונות הופעלה',
+    a11yHideImagesDeactivated: 'הסתרת תמונות כובתה',
+    a11yDyslexiaFont: 'גופן לדיסלקציה',
+    a11yDyslexiaFontActivated: 'גופן לדיסלקציה הופעל',
+    a11yDyslexiaFontDeactivated: 'גופן לדיסלקציה כובה',
+    a11yReadPage: 'קרא דף',
+    a11yReadPageActivated: 'קריאת דף הופעלה',
+    a11yReadPageDeactivated: 'קריאת דף הופסקה',
+    a11yKeyboardNav: 'ניווט מקלדת',
+    a11yKeyboardNavActivated: 'ניווט מקלדת הופעל',
+    a11yKeyboardNavDeactivated: 'ניווט מקלדת כובה',
+    a11yBiggerFont: 'גופן גדול',
+    a11yBiggerFontActivated: 'גופן גדול הופעל',
+    a11yBiggerFontDeactivated: 'גופן גדול כובה',
+    a11ySmallerFont: 'גופן קטן',
+    a11ySmallerFontActivated: 'גופן קטן הופעל',
+    a11ySmallerFontDeactivated: 'גופן קטן כובה',
     a11yResetActivated: 'הגדרות נגישות אופסו',
     a11yMsg: 'הודעת מערכת'
   },
@@ -235,6 +267,38 @@ Areas of expertise include: environmental and climate law, environmental regulat
     a11yLowContrastDeactivated: 'Low contrast deactivated',
     a11yGrayscaleActivated: 'Grayscale mode activated',
     a11yGrayscaleDeactivated: 'Grayscale mode deactivated',
+    a11yReadableFont: 'Bold Text',
+    a11yReadableFontActivated: 'Bold text activated',
+    a11yReadableFontDeactivated: 'Bold text deactivated',
+    a11yHighlightLinks: 'Highlight Links',
+    a11yHighlightLinksActivated: 'Highlight links activated',
+    a11yHighlightLinksDeactivated: 'Highlight links deactivated',
+    a11yBigCursor: 'Big Cursor',
+    a11yBigCursorActivated: 'Big cursor activated',
+    a11yBigCursorDeactivated: 'Big cursor deactivated',
+    a11yCursorColor: 'Cursor Color',
+    a11yCursorColorBlack: 'Black Cursor',
+    a11yCursorColorWhite: 'White Cursor',
+    a11yCursorColorYellow: 'Yellow Cursor',
+    a11yCursorColorRed: 'Red Cursor',
+    a11yHideImages: 'Hide Images',
+    a11yHideImagesActivated: 'Hide images activated',
+    a11yHideImagesDeactivated: 'Hide images deactivated',
+    a11yDyslexiaFont: 'Dyslexia Friendly Font',
+    a11yDyslexiaFontActivated: 'Dyslexia Friendly Font Activated',
+    a11yDyslexiaFontDeactivated: 'Dyslexia Friendly Font Deactivated',
+    a11yReadPage: 'Read Page',
+    a11yReadPageActivated: 'Page Reading Activated',
+    a11yReadPageDeactivated: 'Page Reading Deactivated',
+    a11yKeyboardNav: 'Keyboard Navigation',
+    a11yKeyboardNavActivated: 'Keyboard Navigation Activated',
+    a11yKeyboardNavDeactivated: 'Keyboard Navigation Deactivated',
+    a11yBiggerFont: 'Bigger Font',
+    a11yBiggerFontActivated: 'Bigger font activated',
+    a11yBiggerFontDeactivated: 'Bigger font deactivated',
+    a11ySmallerFont: 'Smaller Font',
+    a11ySmallerFontActivated: 'Smaller font activated',
+    a11ySmallerFontDeactivated: 'Smaller font deactivated',
     a11yResetActivated: 'Accessibility settings reset',
     a11yMsg: 'System Notification'
   }
@@ -301,6 +365,46 @@ setLang('he');
           <div class="a11y-icon">⚪</div>
           <span data-i18n="a11yGrayscale">גווני אפור</span>
         </div>
+        <div class="a11y-option" id="a11y-readable-font">
+          <div class="a11y-icon">Tt</div>
+          <span data-i18n="a11yReadableFont">גופן קריא</span>
+        </div>
+        <div class="a11y-option" id="a11y-highlight-links">
+          <div class="a11y-icon">🔗</div>
+          <span data-i18n="a11yHighlightLinks">הדגשת קישורים</span>
+        </div>
+        <div class="a11y-option" id="a11y-big-cursor">
+          <div class="a11y-icon">👆</div>
+          <span data-i18n="a11yBigCursor">סמן גדול</span>
+        </div>
+        <div class="a11y-option" id="a11y-cursor-color">
+          <div class="a11y-icon">🎨</div>
+          <span data-i18n="a11yCursorColor">צבע סמן</span>
+        </div>
+        <div class="a11y-option" id="a11y-hide-images">
+          <div class="a11y-icon">🖼️</div>
+          <span data-i18n="a11yHideImages">הסתרת תמונות</span>
+        </div>
+        <div class="a11y-option" id="a11y-dyslexia-font">
+          <div class="a11y-icon">Ab</div>
+          <span data-i18n="a11yDyslexiaFont">גופן לדיסלקציה</span>
+        </div>
+        <div class="a11y-option" id="a11y-read-page">
+          <div class="a11y-icon">🔊</div>
+          <span data-i18n="a11yReadPage">קרא דף</span>
+        </div>
+        <div class="a11y-option" id="a11y-keyboard-nav">
+          <div class="a11y-icon">⌨️</div>
+          <span data-i18n="a11yKeyboardNav">ניווט מקלדת</span>
+        </div>
+        <div class="a11y-option" id="a11y-bigger-font">
+          <div class="a11y-icon">A+</div>
+          <span data-i18n="a11yBiggerFont">גופן גדול</span>
+        </div>
+        <div class="a11y-option" id="a11y-smaller-font">
+          <div class="a11y-icon">A-</div>
+          <span data-i18n="a11ySmallerFont">גופן קטן</span>
+        </div>
         <div class="a11y-option" id="a11y-reset">
           <div class="a11y-icon">↺</div>
           <span data-i18n="a11yReset">איפוס</span>
@@ -325,6 +429,16 @@ setLang('he');
   const highContrastBtn = document.getElementById('a11y-high-contrast');
   const lowContrastBtn = document.getElementById('a11y-low-contrast');
   const grayscaleBtn = document.getElementById('a11y-grayscale');
+  const readableFontBtn = document.getElementById('a11y-readable-font');
+  const highlightLinksBtn = document.getElementById('a11y-highlight-links');
+  const bigCursorBtn = document.getElementById('a11y-big-cursor');
+  const cursorColorBtn = document.getElementById('a11y-cursor-color');
+  const hideImagesBtn = document.getElementById('a11y-hide-images');
+  const dyslexiaFontBtn = document.getElementById('a11y-dyslexia-font');
+  const readPageBtn = document.getElementById('a11y-read-page');
+  const keyboardNavBtn = document.getElementById('a11y-keyboard-nav');
+  const biggerFontBtn = document.getElementById('a11y-bigger-font');
+  const smallerFontBtn = document.getElementById('a11y-smaller-font');
   const resetBtn = document.getElementById('a11y-reset');
   const notif = document.getElementById('a11y-notification');
   const notifTitle = document.getElementById('a11y-notif-title');
@@ -335,6 +449,16 @@ setLang('he');
   let isHighContrast = false;
   let isLowContrast = false;
   let isGrayscale = false;
+  let isReadableFont = false;
+  let isHighlightLinks = false;
+  let isBigCursor = false;
+  let isHideImages = false;
+  let isDyslexiaFont = false;
+  let isReading = false;
+  let isKeyboardNav = false;
+  let speechUtterance = null;
+  let cursorColor = 'black'; // black, white, yellow, red
+  let currentZoom = 1;
 
   // 4. Functions
   function toggleMenu() {
@@ -398,26 +522,212 @@ setLang('he');
     showNotification(isGrayscale ? 'a11yGrayscaleActivated' : 'a11yGrayscaleDeactivated');
   }
 
+  function toggleReadableFont() {
+    isReadableFont = !isReadableFont;
+    document.body.classList.toggle('readable-font', isReadableFont);
+    readableFontBtn.classList.toggle('active', isReadableFont);
+
+    showNotification(isReadableFont ? 'a11yReadableFontActivated' : 'a11yReadableFontDeactivated');
+  }
+
+  function toggleHighlightLinks() {
+    isHighlightLinks = !isHighlightLinks;
+    document.body.classList.toggle('highlight-links', isHighlightLinks);
+    highlightLinksBtn.classList.toggle('active', isHighlightLinks);
+
+    showNotification(isHighlightLinks ? 'a11yHighlightLinksActivated' : 'a11yHighlightLinksDeactivated');
+  }
+
+  function updateCursorClass() {
+    // Remove all cursor classes
+    document.body.classList.remove('big-cursor-black', 'big-cursor-white', 'big-cursor-yellow', 'big-cursor-red');
+
+    if (isBigCursor) {
+      document.body.classList.add(`big-cursor-${cursorColor}`);
+    }
+  }
+
+  function toggleBigCursor() {
+    isBigCursor = !isBigCursor;
+    updateCursorClass();
+    bigCursorBtn.classList.toggle('active', isBigCursor);
+
+    showNotification(isBigCursor ? 'a11yBigCursorActivated' : 'a11yBigCursorDeactivated');
+  }
+
+  function toggleCursorColor() {
+    const colors = ['black', 'white', 'yellow', 'red'];
+    const currentIndex = colors.indexOf(cursorColor);
+    const nextIndex = (currentIndex + 1) % colors.length;
+    cursorColor = colors[nextIndex];
+
+    // If cursor was off, turn it on
+    if (!isBigCursor) {
+      isBigCursor = true;
+      bigCursorBtn.classList.add('active');
+    }
+
+    updateCursorClass();
+
+    // Show notification with color name
+    const colorKey = `a11yCursorColor${cursorColor.charAt(0).toUpperCase() + cursorColor.slice(1)}`;
+    showNotification(colorKey);
+  }
+
+  function toggleHideImages() {
+    isHideImages = !isHideImages;
+    document.body.classList.toggle('hide-images', isHideImages);
+    hideImagesBtn.classList.toggle('active', isHideImages);
+
+    showNotification(isHideImages ? 'a11yHideImagesActivated' : 'a11yHideImagesDeactivated');
+  }
+
+  function toggleDyslexiaFont() {
+    isDyslexiaFont = !isDyslexiaFont;
+    document.body.classList.toggle('dyslexia-font', isDyslexiaFont);
+    dyslexiaFontBtn.classList.toggle('active', isDyslexiaFont);
+
+    showNotification(isDyslexiaFont ? 'a11yDyslexiaFontActivated' : 'a11yDyslexiaFontDeactivated');
+  }
+
+  function stopReading() {
+    if (window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+    isReading = false;
+    readPageBtn.classList.remove('active');
+  }
+
+  function toggleReadPage() {
+    if (!('speechSynthesis' in window)) {
+      alert('Text-to-speech is not supported in this browser.');
+      return;
+    }
+
+    if (isReading) {
+      stopReading();
+      showNotification('a11yReadPageDeactivated');
+    } else {
+      isReading = true;
+      readPageBtn.classList.add('active');
+      showNotification('a11yReadPageActivated');
+
+      // Get text content from the body
+      const textToRead = document.body.innerText;
+
+      speechUtterance = new SpeechSynthesisUtterance(textToRead);
+      // Determine language based on document language
+      const currentLang = document.documentElement.lang || 'he';
+      speechUtterance.lang = currentLang === 'he' ? 'he-IL' : 'en-US';
+
+      speechUtterance.onend = () => {
+        isReading = false;
+        readPageBtn.classList.remove('active');
+        showNotification('a11yReadPageDeactivated');
+      };
+
+      speechUtterance.onerror = (e) => {
+        console.error('Speech synthesis error', e);
+        stopReading();
+      };
+
+      window.speechSynthesis.speak(speechUtterance);
+    }
+  }
+
+  function toggleKeyboardNav() {
+    isKeyboardNav = !isKeyboardNav;
+    document.body.classList.toggle('keyboard-nav', isKeyboardNav);
+    keyboardNavBtn.classList.toggle('active', isKeyboardNav);
+
+    showNotification(isKeyboardNav ? 'a11yKeyboardNavActivated' : 'a11yKeyboardNavDeactivated');
+  }
+
+  function updateZoomUI() {
+    document.body.style.zoom = currentZoom;
+
+    if (currentZoom > 1) {
+      biggerFontBtn.classList.add('active');
+      smallerFontBtn.classList.remove('active');
+    } else if (currentZoom < 1) {
+      biggerFontBtn.classList.remove('active');
+      smallerFontBtn.classList.add('active');
+    } else {
+      biggerFontBtn.classList.remove('active');
+      smallerFontBtn.classList.remove('active');
+    }
+  }
+
+  function toggleBiggerFont() {
+    if (currentZoom < 2.0) {
+      currentZoom += 0.1;
+      currentZoom = Math.round(currentZoom * 10) / 10;
+      updateZoomUI();
+      showNotification('a11yBiggerFontActivated');
+    }
+  }
+
+  function toggleSmallerFont() {
+    if (currentZoom > 0.7) {
+      currentZoom -= 0.1;
+      currentZoom = Math.round(currentZoom * 10) / 10;
+      updateZoomUI();
+      showNotification('a11ySmallerFontActivated');
+    }
+  }
+
   function resetA11y() {
     isHighContrast = false;
     isLowContrast = false;
     isGrayscale = false;
+    isReadableFont = false;
+    isHighlightLinks = false;
+    isBigCursor = false;
+    isKeyboardNav = false;
+    currentZoom = 1;
+
     document.body.classList.remove('high-contrast');
     document.body.classList.remove('low-contrast');
     document.body.classList.remove('grayscale');
+    document.body.classList.remove('readable-font');
+    document.body.classList.remove('highlight-links');
+    document.body.classList.remove('hide-images');
+    document.body.classList.remove('dyslexia-font');
+    document.body.classList.remove('keyboard-nav');
+    document.body.classList.remove('big-cursor-black', 'big-cursor-white', 'big-cursor-yellow', 'big-cursor-red');
+    document.body.style.zoom = 1;
+
+    stopReading();
+
     highContrastBtn.classList.remove('active');
     lowContrastBtn.classList.remove('active');
     grayscaleBtn.classList.remove('active');
+    readableFontBtn.classList.remove('active');
+    highlightLinksBtn.classList.remove('active');
+    hideImagesBtn.classList.remove('active');
+    dyslexiaFontBtn.classList.remove('active');
+    keyboardNavBtn.classList.remove('active');
+    bigCursorBtn.classList.remove('active');
+    biggerFontBtn.classList.remove('active');
+    smallerFontBtn.classList.remove('active');
 
     showNotification('a11yResetActivated');
-  }
-
-  // 5. Event Listeners
+  }  // 5. Event Listeners
   toggleBtn.addEventListener('click', toggleMenu);
   closeBtn.addEventListener('click', closeMenu);
   highContrastBtn.addEventListener('click', toggleHighContrast);
   lowContrastBtn.addEventListener('click', toggleLowContrast);
   grayscaleBtn.addEventListener('click', toggleGrayscale);
+  readableFontBtn.addEventListener('click', toggleReadableFont);
+  highlightLinksBtn.addEventListener('click', toggleHighlightLinks);
+  bigCursorBtn.addEventListener('click', toggleBigCursor);
+  cursorColorBtn.addEventListener('click', toggleCursorColor);
+  hideImagesBtn.addEventListener('click', toggleHideImages);
+  dyslexiaFontBtn.addEventListener('click', toggleDyslexiaFont);
+  readPageBtn.addEventListener('click', toggleReadPage);
+  keyboardNavBtn.addEventListener('click', toggleKeyboardNav);
+  biggerFontBtn.addEventListener('click', toggleBiggerFont);
+  smallerFontBtn.addEventListener('click', toggleSmallerFont);
   resetBtn.addEventListener('click', resetA11y);
   notifClose.addEventListener('click', hideNotification);
 
