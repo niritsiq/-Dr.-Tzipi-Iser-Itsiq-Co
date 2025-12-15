@@ -104,6 +104,7 @@ const i18n = {
     // --- Accessibility ---
     a11yTitle: 'נגישות',
     a11yHighContrast: 'ניגודיות גבוהה',
+    a11yLowContrast: 'ניגודיות נמוכה',
     a11yReset: 'איפוס'
   },
 
@@ -216,6 +217,7 @@ Areas of expertise include: environmental and climate law, environmental regulat
     // --- Accessibility ---
     a11yTitle: 'Accessibility',
     a11yHighContrast: 'High Contrast',
+    a11yLowContrast: 'Low Contrast',
     a11yReset: 'Reset'
   }
 };
@@ -273,6 +275,10 @@ setLang('he');
           <div class="a11y-icon">🌗</div>
           <span data-i18n="a11yHighContrast">ניגודיות גבוהה</span>
         </div>
+        <div class="a11y-option" id="a11y-low-contrast">
+          <div class="a11y-icon">☁️</div>
+          <span data-i18n="a11yLowContrast">ניגודיות נמוכה</span>
+        </div>
         <div class="a11y-option" id="a11y-reset">
           <div class="a11y-icon">↺</div>
           <span data-i18n="a11yReset">איפוס</span>
@@ -287,10 +293,12 @@ setLang('he');
   const menu = document.getElementById('a11y-menu');
   const closeBtn = document.getElementById('a11y-close');
   const highContrastBtn = document.getElementById('a11y-high-contrast');
+  const lowContrastBtn = document.getElementById('a11y-low-contrast');
   const resetBtn = document.getElementById('a11y-reset');
 
   // 3. State
   let isHighContrast = false;
+  let isLowContrast = false;
 
   // 4. Functions
   function toggleMenu() {
@@ -302,21 +310,41 @@ setLang('he');
   }
 
   function toggleHighContrast() {
+    if (isLowContrast) {
+      isLowContrast = false;
+      document.body.classList.remove('low-contrast');
+      lowContrastBtn.classList.remove('active');
+    }
     isHighContrast = !isHighContrast;
     document.body.classList.toggle('high-contrast', isHighContrast);
     highContrastBtn.classList.toggle('active', isHighContrast);
   }
 
+  function toggleLowContrast() {
+    if (isHighContrast) {
+      isHighContrast = false;
+      document.body.classList.remove('high-contrast');
+      highContrastBtn.classList.remove('active');
+    }
+    isLowContrast = !isLowContrast;
+    document.body.classList.toggle('low-contrast', isLowContrast);
+    lowContrastBtn.classList.toggle('active', isLowContrast);
+  }
+
   function resetA11y() {
     isHighContrast = false;
+    isLowContrast = false;
     document.body.classList.remove('high-contrast');
+    document.body.classList.remove('low-contrast');
     highContrastBtn.classList.remove('active');
+    lowContrastBtn.classList.remove('active');
   }
 
   // 5. Event Listeners
   toggleBtn.addEventListener('click', toggleMenu);
   closeBtn.addEventListener('click', closeMenu);
   highContrastBtn.addEventListener('click', toggleHighContrast);
+  lowContrastBtn.addEventListener('click', toggleLowContrast);
   resetBtn.addEventListener('click', resetA11y);
 
   // Close menu when clicking outside

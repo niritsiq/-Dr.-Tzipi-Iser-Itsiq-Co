@@ -547,11 +547,13 @@ button[type="submit"]:hover {
     grid-template-columns: 1fr;
   }
 }
+
 /* --- Accessibility Menu --- */
 .accessibility-btn {
   position: fixed;
   bottom: 20px;
-  left: 20px; /* Default for RTL/Hebrew usually, but let's stick to one side or adjust based on dir */
+  left: 20px;
+  /* Default for RTL/Hebrew usually, but let's stick to one side or adjust based on dir */
   z-index: 10000;
   background: var(--navy);
   color: #fff;
@@ -561,7 +563,7 @@ button[type="submit"]:hover {
   height: 50px;
   font-size: 24px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -590,7 +592,7 @@ button[type="submit"]:hover {
   width: 300px;
   background: #fff;
   border: 1px solid #ccc;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   z-index: 10000;
   border-radius: 8px;
   padding: 16px;
@@ -718,3 +720,50 @@ body.high-contrast .logo {
   filter: brightness(1000%) sepia(100%) saturate(1000%) hue-rotate(20deg);
 }
 
+/* Low Contrast Mode */
+body.low-contrast {
+  --navy: #555555;
+  --sage: #777777;
+  --light: #f4f4f4;
+  --text: #555555;
+  background-color: #f4f4f4 !important;
+  color: #555555 !important;
+}
+
+body.low-contrast header,
+body.low-contrast .dropdown-menu,
+body.low-contrast .card,
+body.low-contrast footer,
+body.low-contrast .accessibility-menu {
+  background-color: #f4f4f4 !important;
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+
+body.low-contrast .accessibility-header h3,
+body.low-contrast .accessibility-close,
+body.low-contrast .a11y-option {
+  color: #555 !important;
+  border-color: #ccc !important;
+  background-color: #e0e0e0 !important;
+}
+
+body.low-contrast .a11y-option.active {
+  background-color: #ccc !important;
+  color: #333 !important;
+  font-weight: bold;
+}
+
+body.low-contrast a,
+body.low-contrast h1,
+body.low-contrast h2,
+body.low-contrast h3,
+body.low-contrast p,
+body.low-contrast li,
+body.low-contrast span {
+  color: #555555 !important;
+}
+
+body.low-contrast .logo {
+  filter: opacity(0.7) grayscale(50%);
+}
