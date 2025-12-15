@@ -767,3 +767,79 @@ body.low-contrast span {
 body.low-contrast .logo {
   filter: opacity(0.7) grayscale(50%);
 }
+/* Accessibility Notification */
+.a11y-notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  background: #fff;
+  color: #333;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
+  opacity: 0;
+  border: 1px solid #ddd;
+  min-width: 300px;
+}
+
+.a11y-notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.a11y-notification-content {
+  flex: 1;
+}
+
+.a11y-notification-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.a11y-notification-text {
+  font-size: 12px;
+  color: #666;
+}
+
+.a11y-notification-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #999;
+  padding: 0;
+}
+
+.a11y-notification-close:hover {
+  color: #333;
+}
+
+/* High Contrast adjustments for notification */
+body.high-contrast .a11y-notification {
+  background: #000;
+  border-color: #ffff00;
+}
+body.high-contrast .a11y-notification-title,
+body.high-contrast .a11y-notification-text,
+body.high-contrast .a11y-notification-close {
+  color: #ffff00;
+}
+
+/* Low Contrast adjustments for notification */
+body.low-contrast .a11y-notification {
+  background: #f4f4f4;
+  border-color: #ccc;
+}
+body.low-contrast .a11y-notification-title,
+body.low-contrast .a11y-notification-text,
+body.low-contrast .a11y-notification-close {
+  color: #555;
+}

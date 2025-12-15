@@ -105,7 +105,13 @@ const i18n = {
     a11yTitle: 'נגישות',
     a11yHighContrast: 'ניגודיות גבוהה',
     a11yLowContrast: 'ניגודיות נמוכה',
-    a11yReset: 'איפוס'
+    a11yReset: 'איפוס',
+    a11yHighContrastActivated: 'ניגודיות גבוהה הופעלה',
+    a11yHighContrastDeactivated: 'ניגודיות גבוהה כובתה',
+    a11yLowContrastActivated: 'ניגודיות נמוכה הופעלה',
+    a11yLowContrastDeactivated: 'ניגודיות נמוכה כובתה',
+    a11yResetActivated: 'הגדרות נגישות אופסו',
+    a11yMsg: 'הודעת מערכת'
   },
 
   // --- ENGLISH TRANSLATIONS ---
@@ -218,7 +224,13 @@ Areas of expertise include: environmental and climate law, environmental regulat
     a11yTitle: 'Accessibility',
     a11yHighContrast: 'High Contrast',
     a11yLowContrast: 'Low Contrast',
-    a11yReset: 'Reset'
+    a11yReset: 'Reset',
+    a11yHighContrastActivated: 'High contrast activated',
+    a11yHighContrastDeactivated: 'High contrast deactivated',
+    a11yLowContrastActivated: 'Low contrast activated',
+    a11yLowContrastDeactivated: 'Low contrast deactivated',
+    a11yResetActivated: 'Accessibility settings reset',
+    a11yMsg: 'System Notification'
   }
 };
 
@@ -285,6 +297,13 @@ setLang('he');
         </div>
       </div>
     </div>
+    <div class="a11y-notification" id="a11y-notification">
+      <div class="a11y-notification-content">
+        <span class="a11y-notification-title" id="a11y-notif-title"></span>
+        <span class="a11y-notification-text" id="a11y-notif-text"></span>
+      </div>
+      <button class="a11y-notification-close" id="a11y-notif-close">✕</button>
+    </div>
   `;
   document.body.insertAdjacentHTML('beforeend', a11yHTML);
 
@@ -295,6 +314,10 @@ setLang('he');
   const highContrastBtn = document.getElementById('a11y-high-contrast');
   const lowContrastBtn = document.getElementById('a11y-low-contrast');
   const resetBtn = document.getElementById('a11y-reset');
+  const notif = document.getElementById('a11y-notification');
+  const notifTitle = document.getElementById('a11y-notif-title');
+  const notifText = document.getElementById('a11y-notif-text');
+  const notifClose = document.getElementById('a11y-notif-close');
 
   // 3. State
   let isHighContrast = false;
@@ -309,6 +332,25 @@ setLang('he');
     menu.classList.remove('active');
   }
 
+  function showNotification(key) {
+    const lang = document.documentElement.lang || 'he';
+    const dict = i18n[lang];
+
+    notifTitle.textContent = dict.a11yMsg || 'Notification';
+    notifText.textContent = dict[key] || key;
+
+    notif.classList.add('show');
+
+    if (window.a11yTimeout) clearTimeout(window.a11yTimeout);
+    window.a11yTimeout = setTimeout(() => {
+      notif.classList.remove('show');
+    }, 3000);
+  }
+
+  function hideNotification() {
+    notif.classList.remove('show');
+  }
+
   function toggleHighContrast() {
     if (isLowContrast) {
       isLowContrast = false;
@@ -318,6 +360,8 @@ setLang('he');
     isHighContrast = !isHighContrast;
     document.body.classList.toggle('high-contrast', isHighContrast);
     highContrastBtn.classList.toggle('active', isHighContrast);
+
+    showNotification(isHighContrast ? 'a11yHighContrastActivated' : 'a11yHighContrastDeactivated');
   }
 
   function toggleLowContrast() {
@@ -329,6 +373,8 @@ setLang('he');
     isLowContrast = !isLowContrast;
     document.body.classList.toggle('low-contrast', isLowContrast);
     lowContrastBtn.classList.toggle('active', isLowContrast);
+
+    showNotification(isLowContrast ? 'a11yLowContrastActivated' : 'a11yLowContrastDeactivated');
   }
 
   function resetA11y() {
@@ -338,6 +384,8 @@ setLang('he');
     document.body.classList.remove('low-contrast');
     highContrastBtn.classList.remove('active');
     lowContrastBtn.classList.remove('active');
+
+    showNotification('a11yResetActivated');
   }
 
   // 5. Event Listeners
@@ -346,6 +394,7 @@ setLang('he');
   highContrastBtn.addEventListener('click', toggleHighContrast);
   lowContrastBtn.addEventListener('click', toggleLowContrast);
   resetBtn.addEventListener('click', resetA11y);
+  notifClose.addEventListener('click', hideNotification);
 
   // Close menu when clicking outside
   document.addEventListener('click', (e) => {
