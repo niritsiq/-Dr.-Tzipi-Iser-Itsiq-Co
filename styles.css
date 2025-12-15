@@ -547,3 +547,174 @@ button[type="submit"]:hover {
     grid-template-columns: 1fr;
   }
 }
+/* --- Accessibility Menu --- */
+.accessibility-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Default for RTL/Hebrew usually, but let's stick to one side or adjust based on dir */
+  z-index: 10000;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+[dir='ltr'] .accessibility-btn {
+  left: auto;
+  right: 20px;
+}
+
+[dir='rtl'] .accessibility-btn {
+  right: auto;
+  left: 20px;
+}
+
+.accessibility-btn:hover {
+  transform: scale(1.1);
+}
+
+.accessibility-menu {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  z-index: 10000;
+  border-radius: 8px;
+  padding: 16px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+[dir='ltr'] .accessibility-menu {
+  left: auto;
+  right: 20px;
+}
+
+[dir='rtl'] .accessibility-menu {
+  right: auto;
+  left: 20px;
+}
+
+.accessibility-menu.active {
+  display: flex;
+}
+
+.accessibility-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.accessibility-header h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #000;
+}
+
+.accessibility-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+}
+
+.a11y-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.a11y-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  background: #f9f9f9;
+  transition: background 0.2s;
+  color: #000;
+}
+
+.a11y-option:hover {
+  background: #eee;
+}
+
+.a11y-option.active {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+.a11y-icon {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+/* High Contrast Mode */
+body.high-contrast {
+  --navy: #ffff00;
+  --sage: #00ff00;
+  --light: #000000;
+  --text: #ffffff;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast header,
+body.high-contrast .dropdown-menu,
+body.high-contrast .card,
+body.high-contrast footer,
+body.high-contrast .accessibility-menu {
+  background-color: #000000 !important;
+  border-color: #ffff00 !important;
+}
+
+body.high-contrast .accessibility-header h3,
+body.high-contrast .accessibility-close,
+body.high-contrast .a11y-option {
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+  background-color: #000 !important;
+}
+
+body.high-contrast .a11y-option.active {
+  background-color: #ffff00 !important;
+  color: #000 !important;
+}
+
+body.high-contrast a,
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast p,
+body.high-contrast li,
+body.high-contrast span {
+  color: #ffff00 !important;
+}
+
+body.high-contrast .logo {
+  filter: brightness(1000%) sepia(100%) saturate(1000%) hue-rotate(20deg);
+}
+

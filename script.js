@@ -99,7 +99,12 @@ const i18n = {
     sagiEduTitle: 'השכלה',
     sagiEduList: '<li>תואר שני ביחסים בינלאומיים (M.A) – אוניברסיטת תל אביב (2009)</li><li>תואר ראשון במשפטים (LL.B) – אוניברסיטת חיפה (1999)</li>',
     sagiBarTitle: 'הסמכה', sagiBar: 'לשכת עורכי הדין בישראל, 2001',
-    sagiLangTitle: 'שפות', sagiLang: 'עברית, אנגלית, שוודית, נורווגית, דנית, הולנדית, צרפתית, פורטוגזית (חלקית)'
+    sagiLangTitle: 'שפות', sagiLang: 'עברית, אנגלית, שוודית, נורווגית, דנית, הולנדית, צרפתית, פורטוגזית (חלקית)',
+
+    // --- Accessibility ---
+    a11yTitle: 'נגישות',
+    a11yHighContrast: 'ניגודיות גבוהה',
+    a11yReset: 'איפוס'
   },
 
   // --- ENGLISH TRANSLATIONS ---
@@ -206,12 +211,16 @@ Areas of expertise include: environmental and climate law, environmental regulat
     sagiEduTitle: 'Education',
     sagiEduList: '<li>M.A. in International Relations – Tel Aviv University (2009)</li><li>LL.B. – University of Haifa (1999)</li>',
     sagiBarTitle: 'Bar Admission', sagiBar: 'Israel Bar Association, 2001',
-    sagiLangTitle: 'Languages', sagiLang: 'Hebrew, English, Swedish, Norwegian, Danish, Dutch, French, Portuguese (partial proficiency)'
+    sagiLangTitle: 'Languages', sagiLang: 'Hebrew, English, Swedish, Norwegian, Danish, Dutch, French, Portuguese (partial proficiency)',
+
+    // --- Accessibility ---
+    a11yTitle: 'Accessibility',
+    a11yHighContrast: 'High Contrast',
+    a11yReset: 'Reset'
   }
 };
 
 // --- LOGIC ---
-const elements = document.querySelectorAll('[data-i18n]');
 const btnHe = document.getElementById('btn-he');
 const btnEn = document.getElementById('btn-en');
 
@@ -219,6 +228,9 @@ function setLang(lang) {
   const dict = i18n[lang];
   document.documentElement.lang = dict.lang;
   document.documentElement.dir = dict.dir;
+
+  // Query elements every time to support dynamically added content (like accessibility menu)
+  const elements = document.querySelectorAll('[data-i18n]');
 
   elements.forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -243,3 +255,74 @@ if (btnEn) btnEn.addEventListener('click', () => setLang('en'));
 
 // Initialize
 setLang('he');
+
+// --- Accessibility Menu Logic ---
+(function () {
+  // 1. Inject HTML
+  const a11yHTML = `
+    <button class="accessibility-btn" id="a11y-toggle" aria-label="Accessibility Menu">
+      ♿
+    </button>
+    <div class="accessibility-menu" id="a11y-menu">
+      <div class="accessibility-header">
+        <h3 data-i18n="a11yTitle">נגישות</h3>
+        <button class="accessibility-close" id="a11y-close">✕</button>
+      </div>
+      <div class="a11y-grid">
+        <div class="a11y-option" id="a11y-high-contrast">
+          <div class="a11y-icon">🌗</div>
+          <span data-i18n="a11yHighContrast">ניגודיות גבוהה</span>
+        </div>
+        <div class="a11y-option" id="a11y-reset">
+          <div class="a11y-icon">↺</div>
+          <span data-i18n="a11yReset">איפוס</span>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', a11yHTML);
+
+  // 2. Elements
+  const toggleBtn = document.getElementById('a11y-toggle');
+  const menu = document.getElementById('a11y-menu');
+  const closeBtn = document.getElementById('a11y-close');
+  const highContrastBtn = document.getElementById('a11y-high-contrast');
+  const resetBtn = document.getElementById('a11y-reset');
+
+  // 3. State
+  let isHighContrast = false;
+
+  // 4. Functions
+  function toggleMenu() {
+    menu.classList.toggle('active');
+  }
+
+  function closeMenu() {
+    menu.classList.remove('active');
+  }
+
+  function toggleHighContrast() {
+    isHighContrast = !isHighContrast;
+    document.body.classList.toggle('high-contrast', isHighContrast);
+    highContrastBtn.classList.toggle('active', isHighContrast);
+  }
+
+  function resetA11y() {
+    isHighContrast = false;
+    document.body.classList.remove('high-contrast');
+    highContrastBtn.classList.remove('active');
+  }
+
+  // 5. Event Listeners
+  toggleBtn.addEventListener('click', toggleMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  highContrastBtn.addEventListener('click', toggleHighContrast);
+  resetBtn.addEventListener('click', resetA11y);
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !toggleBtn.contains(e.target) && menu.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+})();
