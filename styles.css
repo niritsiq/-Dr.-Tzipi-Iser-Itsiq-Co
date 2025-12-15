@@ -843,3 +843,77 @@ body.low-contrast .a11y-notification-text,
 body.low-contrast .a11y-notification-close {
   color: #555;
 }
+
+/* Grayscale Mode Overlay */
+.grayscale-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: grayscale(100%);
+  z-index: 2147483647; /* Max z-index to cover everything */
+  pointer-events: none;
+  display: none;
+}
+
+body.grayscale .grayscale-overlay {
+  display: block;
+}
+
+/* Refined Low Contrast Mode (Light Background, Dark Content) */
+body.low-contrast {
+  --navy: #333333;
+  --sage: #555555;
+  --light: #ffffff;
+  --text: #000000;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.low-contrast header,
+body.low-contrast .dropdown-menu,
+body.low-contrast .card,
+body.low-contrast footer,
+body.low-contrast .accessibility-menu {
+  background-color: #ffffff !important;
+  border-color: #000000 !important;
+  box-shadow: none !important;
+}
+
+body.low-contrast .accessibility-header h3,
+body.low-contrast .accessibility-close,
+body.low-contrast .a11y-option {
+  color: #000000 !important;
+  border-color: #000000 !important;
+  background-color: #f0f0f0 !important;
+}
+
+body.low-contrast .a11y-option.active {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+body.low-contrast a,
+body.low-contrast h1,
+body.low-contrast h2,
+body.low-contrast h3,
+body.low-contrast p,
+body.low-contrast li,
+body.low-contrast span {
+  color: #000000 !important;
+}
+
+body.low-contrast .logo {
+  filter: grayscale(100%) contrast(120%);
+}
+
+/* Notification for Grayscale */
+body.grayscale .a11y-notification {
+  /* Ensure notification is visible even in grayscale, though the overlay covers it. 
+     Actually, if overlay is z-index max, it covers notification too. 
+     But backdrop-filter just makes it gray, doesn't hide it. 
+     So notification will be grayed out. That's fine. */
+}
+

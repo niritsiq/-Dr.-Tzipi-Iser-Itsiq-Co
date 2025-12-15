@@ -105,11 +105,14 @@ const i18n = {
     a11yTitle: 'נגישות',
     a11yHighContrast: 'ניגודיות גבוהה',
     a11yLowContrast: 'ניגודיות נמוכה',
+    a11yGrayscale: 'גווני אפור',
     a11yReset: 'איפוס',
     a11yHighContrastActivated: 'ניגודיות גבוהה הופעלה',
     a11yHighContrastDeactivated: 'ניגודיות גבוהה כובתה',
     a11yLowContrastActivated: 'ניגודיות נמוכה הופעלה',
     a11yLowContrastDeactivated: 'ניגודיות נמוכה כובתה',
+    a11yGrayscaleActivated: 'מצב גווני אפור הופעל',
+    a11yGrayscaleDeactivated: 'מצב גווני אפור כובה',
     a11yResetActivated: 'הגדרות נגישות אופסו',
     a11yMsg: 'הודעת מערכת'
   },
@@ -224,11 +227,14 @@ Areas of expertise include: environmental and climate law, environmental regulat
     a11yTitle: 'Accessibility',
     a11yHighContrast: 'High Contrast',
     a11yLowContrast: 'Low Contrast',
+    a11yGrayscale: 'Grayscale',
     a11yReset: 'Reset',
     a11yHighContrastActivated: 'High contrast activated',
     a11yHighContrastDeactivated: 'High contrast deactivated',
     a11yLowContrastActivated: 'Low contrast activated',
     a11yLowContrastDeactivated: 'Low contrast deactivated',
+    a11yGrayscaleActivated: 'Grayscale mode activated',
+    a11yGrayscaleDeactivated: 'Grayscale mode deactivated',
     a11yResetActivated: 'Accessibility settings reset',
     a11yMsg: 'System Notification'
   }
@@ -291,6 +297,10 @@ setLang('he');
           <div class="a11y-icon">☁️</div>
           <span data-i18n="a11yLowContrast">ניגודיות נמוכה</span>
         </div>
+        <div class="a11y-option" id="a11y-grayscale">
+          <div class="a11y-icon">⚪</div>
+          <span data-i18n="a11yGrayscale">גווני אפור</span>
+        </div>
         <div class="a11y-option" id="a11y-reset">
           <div class="a11y-icon">↺</div>
           <span data-i18n="a11yReset">איפוס</span>
@@ -304,6 +314,7 @@ setLang('he');
       </div>
       <button class="a11y-notification-close" id="a11y-notif-close">✕</button>
     </div>
+    <div class="grayscale-overlay" id="grayscale-overlay"></div>
   `;
   document.body.insertAdjacentHTML('beforeend', a11yHTML);
 
@@ -313,6 +324,7 @@ setLang('he');
   const closeBtn = document.getElementById('a11y-close');
   const highContrastBtn = document.getElementById('a11y-high-contrast');
   const lowContrastBtn = document.getElementById('a11y-low-contrast');
+  const grayscaleBtn = document.getElementById('a11y-grayscale');
   const resetBtn = document.getElementById('a11y-reset');
   const notif = document.getElementById('a11y-notification');
   const notifTitle = document.getElementById('a11y-notif-title');
@@ -322,6 +334,7 @@ setLang('he');
   // 3. State
   let isHighContrast = false;
   let isLowContrast = false;
+  let isGrayscale = false;
 
   // 4. Functions
   function toggleMenu() {
@@ -377,13 +390,24 @@ setLang('he');
     showNotification(isLowContrast ? 'a11yLowContrastActivated' : 'a11yLowContrastDeactivated');
   }
 
+  function toggleGrayscale() {
+    isGrayscale = !isGrayscale;
+    document.body.classList.toggle('grayscale', isGrayscale);
+    grayscaleBtn.classList.toggle('active', isGrayscale);
+
+    showNotification(isGrayscale ? 'a11yGrayscaleActivated' : 'a11yGrayscaleDeactivated');
+  }
+
   function resetA11y() {
     isHighContrast = false;
     isLowContrast = false;
+    isGrayscale = false;
     document.body.classList.remove('high-contrast');
     document.body.classList.remove('low-contrast');
+    document.body.classList.remove('grayscale');
     highContrastBtn.classList.remove('active');
     lowContrastBtn.classList.remove('active');
+    grayscaleBtn.classList.remove('active');
 
     showNotification('a11yResetActivated');
   }
@@ -393,6 +417,7 @@ setLang('he');
   closeBtn.addEventListener('click', closeMenu);
   highContrastBtn.addEventListener('click', toggleHighContrast);
   lowContrastBtn.addEventListener('click', toggleLowContrast);
+  grayscaleBtn.addEventListener('click', toggleGrayscale);
   resetBtn.addEventListener('click', resetA11y);
   notifClose.addEventListener('click', hideNotification);
 
