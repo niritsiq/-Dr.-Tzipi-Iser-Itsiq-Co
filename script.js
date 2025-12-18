@@ -749,3 +749,43 @@ setLang('he');
     }
   });
 })();
+
+// --- MOBILE MENU LOGIC ---
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav');
+
+  if (hamburger && navMenu) {
+    // Toggle menu on click
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+
+      // Toggle icon between ☰ and ✕
+      if (navMenu.classList.contains('active')) {
+        hamburger.textContent = '✕';
+      } else {
+        hamburger.textContent = '☰';
+      }
+    });
+
+    // Close menu when clicking ANY link
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        hamburger.textContent = '☰';
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        hamburger.textContent = '☰';
+      }
+    });
+  }
+});
