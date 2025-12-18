@@ -1327,3 +1327,191 @@ body.keyboard-nav *:focus {
     transform: translateY(0);
   }
 }
+
+/* --- PROFESSIONAL FOOTER (Clean & Mobile Ready) --- */
+footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e3e8ef;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Vertically center everything */
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Brand Section */
+.footer-brand {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-brand-text h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.footer-brand-text p {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+/* Contact Section */
+.footer-contact {
+  flex: 2;
+  text-align: center;
+  min-width: 280px;
+}
+
+.footer-contact h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-contact p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 15px;
+  color: #333;
+  flex-wrap: wrap;
+}
+
+.separator {
+  color: #ccc;
+  font-weight: 300;
+}
+
+/* Social Section */
+.footer-social {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 150px;
+}
+
+[dir="ltr"] .footer-social {
+  justify-content: flex-end;
+}
+
+[dir="rtl"] .footer-social {
+  justify-content: flex-end;
+}
+
+/* Keep consistent */
+
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--navy);
+  border: 1px solid #e3e8ef;
+  padding: 8px 18px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.linkedin-btn:hover {
+  background-color: #0077b5;
+  color: #fff;
+  border-color: #0077b5;
+}
+
+.linkedin-btn:hover .plus-icon {
+  color: #fff;
+}
+
+.plus-icon {
+  font-size: 16px;
+  color: var(--sage);
+  transition: color 0.2s;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background-color: #333;
+  color: #e0e0e0;
+  padding: 15px 0;
+  font-size: 13px;
+  text-align: center;
+}
+
+.bottom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- MOBILE SPECIFIC (Phone View) --- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    /* Stack them vertically */
+    text-align: center;
+    gap: 35px;
+    /* More space between sections */
+    padding: 40px 20px;
+  }
+
+  .footer-brand,
+  .footer-contact,
+  .footer-social {
+    width: 100%;
+    /* Full width */
+    min-width: auto;
+    justify-content: center;
+    /* Center social button */
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand-text h3 {
+    font-size: 24px;
+    /* Slightly larger for readability */
+  }
+
+  .contact-row {
+    flex-direction: column;
+    /* Stack phone and email vertically */
+    gap: 8px;
+  }
+
+  .separator {
+    display: none;
+    /* Hide the "|" separator on mobile */
+  }
+
+  /* Make the LinkedIn button bigger for touch */
+  .linkedin-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+}

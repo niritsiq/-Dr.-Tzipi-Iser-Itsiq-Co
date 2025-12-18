@@ -17,7 +17,10 @@ const i18n = {
     cta: 'צור קשר',
 
     // --- Footer ---
-    footer: '© ד"ר ציפי איסר איציק ושות\' | משרד עורכי דין',
+    footerBrandTitle: 'ד"ר ציפי איסר איציק ושות\'',
+    footerBrandSub: 'משרד עורכי דין ונוטריון',
+    footerContactTitle: 'צור קשר',
+    footerCopyright: '© ד"ר ציפי איסר איציק ושות\' | משרד עורכי דין',
 
     // --- HOME PAGE CARDS ---
     aboutTitle: 'אודות',
@@ -164,7 +167,10 @@ const i18n = {
     <strong>The firm is consistently ranked in the top tier ("Tier 1") by leading legal directories.</strong>`,
     cta: 'Contact Us',
 
-    footer: '© Dr. Tzipi Iser Itsiq & Co. | Law Firm',
+    footerBrandTitle: 'Dr. Tzipi Iser Itsiq & Co.',
+    footerBrandSub: 'Law Firm & Notary',
+    footerContactTitle: 'Contact Us',
+    footerCopyright: '© Dr. Tzipi Iser Itsiq & Co. | Law Firm',
 
     // Home Page Cards
     aboutTitle: 'About',
