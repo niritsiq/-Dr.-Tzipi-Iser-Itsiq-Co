@@ -21,6 +21,9 @@ const i18n = {
     footerBrandSub: 'משרד עורכי דין ונוטריון',
     footerContactTitle: 'צור קשר',
     footerCopyright: '© ד"ר ציפי איסר איציק ושות\' | משרד עורכי דין',
+    popupTitle: 'האתר בבנייה',
+    popupMessage: 'האתר נמצא כרגע בתהליכי בנייה ושדרוג. אנו מתנצלים על אי הנוחות ומזמינים אתכם לחזור בקרוב.',
+    popupClose: 'סגור',
 
     // --- HOME PAGE CARDS ---
     aboutTitle: 'אודות',
@@ -171,6 +174,9 @@ const i18n = {
     footerBrandSub: 'Law Firm & Notary',
     footerContactTitle: 'Contact Us',
     footerCopyright: '© Dr. Tzipi Iser Itsiq & Co. | Law Firm',
+    popupTitle: 'Under Construction',
+    popupMessage: 'The website is currently under construction and being upgraded. We apologize for the inconvenience and invite you to visit again soon.',
+    popupClose: 'Close',
 
     // Home Page Cards
     aboutTitle: 'About',
@@ -795,3 +801,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// --- CONSTRUCTION POPUP LOGIC ---
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if popup was already shown in this session
+  if (!sessionStorage.getItem('constructionPopupShown')) {
+    createConstructionPopup();
+  }
+});
+
+function createConstructionPopup() {
+  const lang = document.documentElement.lang || 'he';
+  const dict = i18n[lang];
+
+  const popupHTML = `
+    <div class="popup-overlay" id="construction-popup">
+      <div class="popup-content">
+        <div class="popup-icon">🚧</div>
+        <h2 class="popup-title" data-i18n="popupTitle">${dict.popupTitle}</h2>
+        <p class="popup-message" data-i18n="popupMessage">${dict.popupMessage}</p>
+        <button class="popup-close-btn" id="popup-close" data-i18n="popupClose">${dict.popupClose}</button>
+      </div>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML('beforeend', popupHTML);
+
+  const popup = document.getElementById('construction-popup');
+  const closeBtn = document.getElementById('popup-close');
+
+  // Show with a slight delay for effect
+  setTimeout(() => {
+    popup.classList.add('active');
+  }, 500);
+
+  closeBtn.addEventListener('click', () => {
+    popup.classList.remove('active');
+    setTimeout(() => {
+      popup.remove();
+    }, 300);
+    sessionStorage.setItem('constructionPopupShown', 'true');
+  });
+}
